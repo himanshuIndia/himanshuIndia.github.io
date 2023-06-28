@@ -7,7 +7,6 @@ first_name: Himanshu
 middle_name:
 last_name: Singh
 email: himanshus@iiitd.ac.in
-
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Himanshu Singh, PhD Researcher, Machine Learning, Computer Vision, IIIT Delhi.
 footer_text: >
