@@ -19,9 +19,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a passionate researcher in the field of Machine Learning, currently pursuing my Ph.D. at IIIT Delhi where I am a part of [Visual Conception Group](vcg.iiitd.edu.in). With a specific focus on adversarial attacks, I delve deep into understanding the vulnerabilities of machine learning models and devising robust defenses against malicious manipulations. Under the guidance of Dr. AV Subramanyam, I am fortunate to be at the forefront of groundbreaking research.
+I am a passionate researcher in the field of Machine Learning, currently pursuing my Ph.D. at IIIT Delhi where I am a part of [Visual Conception Group](https://vcg.iiitd.edu.in/). With a specific focus on adversarial attacks, I delve deep into understanding the vulnerabilities of machine learning models and devising robust defenses against malicious manipulations. Under the guidance of Dr. AV Subramanyam, I am fortunate to be at the forefront of groundbreaking research.
 
-Prior to my doctoral journey, I gained invaluable industry experience as a Research Scientist at [Animaker](animaker.com). Working in a dynamic environment, I honed my skills in applying cutting-edge machine learning techniques to real-world problems. I worked on building the text to video tool [Steve AI](steve.ai) This experience provided me with a practical perspective and strengthened my ability to bridge the gap between academia and industry.
+Prior to my doctoral journey, I gained invaluable industry experience as a Research Scientist at [Animaker](https://www.animaker.com/). Working in a dynamic environment, I honed my skills in applying cutting-edge machine learning techniques to real-world problems. I worked on building the text to video tool [Steve AI](https://www.steve.ai/) This experience provided me with a practical perspective and strengthened my ability to bridge the gap between academia and industry.
 
 Thank you for visiting my website. I am always open to exciting opportunities and collaborations. Together, let's shape the future of machine learning and defend against adversarial attacks.
 
