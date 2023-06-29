@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: A summary of my teaching experience.
 nav: true
-nav_order: 5
+nav_order: 2
 ---
 
 All positions are affilated with IIIT Delhi.
