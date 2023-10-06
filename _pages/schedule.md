@@ -2,8 +2,8 @@
 layout: page
 permalink: /schedule/
 title: schedule
-nav: true
-nav_order: 4
+nav: false
+nav_order: 
 description: 
 ---
 
