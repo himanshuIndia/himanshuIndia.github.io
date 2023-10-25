@@ -1,0 +1,26 @@
+- name: "CVPR 2024"
+  date: "2023-11-11 07:59:00"
+  abstract_deadline: "2023-11-04 06:59:00" # Optional
+  timezone: "Universal"
+  venue: "Seattle Convention Center, WA"
+  note: # Optional
+
+- name: "ICME 2024"
+  date: "2023-12-15 00:00:00"
+  abstract_deadline:
+  timezone: "Universal"
+  venue: "Niagra Falls, Canada"
+  note: "Tentative"
+
+- name: "IJCAI 2024"
+  date: "2024-01-17 00:00:00"
+  abstract_deadline: "2024-01-10 00:00:00" # Optional
+  timezone: "Universal"
+  venue: "Jeju, Korea"
+  note: "Tentative"
+
+- name: "ECCV 2024"
+  date: "2024-03-07 21:00:00"
+  timezone: "Universal"
+  venue: "MiCo Milano, Italy"
+# Add more conferences with their venues and notes as needed

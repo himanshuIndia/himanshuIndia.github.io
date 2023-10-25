@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<div class="post">
+
+    <header class="post-header">
+        <h1 class="post-title">Upcoming Conferences</h1>
+        <p class="post-description">{{ page.description }}</p>
+      </header>
+
+    <article>
+        <div id="countdowns">
+            {% for conference in site.data.conferences %}
+          <div class="conference">
+            <h2>{{ conference.name }}</h2>
+          
+            <div class="timers">
+              {% if conference.abstract_deadline %}
+              <div class="timer-wrapper">
+                <span><strong>Abstract Deadline:</strong></span>
+                <div class="timer" id="timer-abstract-{{ forloop.index }}" data-date="{{ conference.abstract_deadline }}" data-timezone="{{ conference.timezone }}"></div>
+              </div>
+              {% endif %}
+          
+              <div class="timer-wrapper">
+                <span><strong>Submission Deadline:</strong></span>
+                <div class="timer" id="timer-submission-{{ forloop.index }}" data-date="{{ conference.date }}" data-timezone="{{ conference.timezone }}"></div>
+              </div>
+            </div>
+          
+            <p><strong>Venue:</strong> {{ conference.venue }}</p>
+          
+            {% if conference.note %}
+            <p>Note: {{ conference.note }}</p>
+            {% endif %}
+          </div>
+          <br>
+          {% endfor %}
+          
+          
+          
+          </div>
+    </article>
+
+  </div>
+
+
+
+
+<script>
+function updateCountdown(id, endDateInConferenceTimeZone, timeZone) {
+  // Convert both times to UTC and then find the difference
+  const nowUTC = new Date().getTime();
+  const deadlineUTC = endDateInConferenceTimeZone - (new Date(new Intl.DateTimeFormat('en-US', { timeZone: timeZone }).format(endDateInConferenceTimeZone)).getTimezoneOffset() * 60000);
+  
+  const distance = deadlineUTC - nowUTC;
+
+  if (distance < 0) {
+    document.getElementById(id).innerHTML = "EXPIRED";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById(id).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const timers = document.querySelectorAll("[id^=timer-]");
+  timers.forEach(function(timer) {
+    const dateStr = timer.getAttribute("data-date");
+    const timeZone = timer.getAttribute("data-timezone");
+    
+    const endDateInConferenceTimeZone = new Date(dateStr);
+    
+    updateCountdown(timer.id, endDateInConferenceTimeZone, timeZone);
+    setInterval(function() {
+      updateCountdown(timer.id, endDateInConferenceTimeZone, timeZone);
+    }, 1000);
+  });
+});
+
+</script>
