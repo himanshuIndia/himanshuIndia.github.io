@@ -18,3 +18,42 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/solid",
   "font-awesome/regular"
 ;
+
+/* Custom styles for conferences page */
+
+.timers {
+  display: flex;
+  flex-direction: column; /* Stack the timers vertically */
+}
+
+.timer-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between the timers */
+}
+
+.timer-wrapper span {
+  margin-right: 10px;
+}
+
+.timer {
+  white-space: nowrap; /* Prevent timer from wrapping onto multiple lines */
+}
+
+#countdowns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.conference {
+  flex: 1 1 calc(33.33% - 20px); /* 3 per row */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.conference h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
