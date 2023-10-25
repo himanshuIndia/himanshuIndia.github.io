@@ -1,4 +1,5 @@
 - name: "CVPR 2024"
+  url: "https://cvpr.thecvf.com/"
   date: "2023-11-11 07:59:00"
   abstract_deadline: "2023-11-04 06:59:00" # Optional
   timezone: "Universal"
@@ -6,6 +7,7 @@
   note: # Optional
 
 - name: "ICME 2024"
+  url: "https://2024.ieeeicme.org/"
   date: "2023-12-15 00:00:00"
   abstract_deadline:
   timezone: "Universal"
@@ -13,6 +15,7 @@
   note: "Tentative"
 
 - name: "IJCAI 2024"
+  url: "https://ijcai24.org/"
   date: "2024-01-17 00:00:00"
   abstract_deadline: "2024-01-10 00:00:00" # Optional
   timezone: "Universal"
@@ -20,6 +23,7 @@
   note: "Tentative"
 
 - name: "ECCV 2024"
+  url: "https://eccv2024.ecva.net/"
   date: "2024-03-07 21:00:00"
   timezone: "Universal"
   venue: "MiCo Milano, Italy"
