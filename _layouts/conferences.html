@@ -12,7 +12,7 @@ layout: default
         <div id="countdowns">
             {% for conference in site.data.conferences %}
           <div class="conference">
-            <h2>{{ conference.name }}</h2>
+            <h2><a href="{{ conference.url }}" target="_blank" rel="noopener">{{ conference.name }}</a></h2>
           
             <div class="timers">
               {% if conference.abstract_deadline %}
