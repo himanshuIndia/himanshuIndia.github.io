@@ -155,9 +155,9 @@ disqus_shortname:  # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -234,6 +234,28 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  
+  - scope:
+      path: "blog"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "_posts"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "news"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "projects"
+    values:
+      sitemap: false
+
+  
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
@@ -268,8 +290,8 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Singh]
+  first_name: [Himanshu]
 
   style: apa
   locale: en
