@@ -235,6 +235,11 @@ defaults:
       sitemap: false
   
   - scope:
+      path: "assets/pdf/himanshu_singh_cv.pdf"
+    values:
+      sitemap: true
+  
+  - scope:
       path: "blog"
     values:
       sitemap: false
