@@ -1,10 +1,10 @@
 - name: "CVPR 2024"
   url: "https://cvpr.thecvf.com/"
-  date: "2023-11-11 07:59:00"
+  date: "2023-11-18 07:59:00"
   abstract_deadline: "2023-11-04 06:59:00" # Optional
   timezone: "Universal"
   venue: "Seattle Convention Center, WA"
-  note: # Optional
+  note: "Deadline extended"
 
 - name: "ICME 2024"
   url: "https://2024.ieeeicme.org/"
