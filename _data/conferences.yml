@@ -1,11 +1,3 @@
-- name: "ICME 2024"
-  url: "https://2024.ieeeicme.org/"
-  date: "2023-12-30 00:00:00"
-  abstract_deadline:
-  timezone: "Universal"
-  venue: "Niagra Falls, Canada"
-  note: "Tentative"
-
 - name: "IJCAI 2024"
   url: "https://ijcai24.org/"
   date: "2024-01-17 00:00:00"
