@@ -1,35 +1,61 @@
-- name: "WACV 2025 Round 1"
-  url: "https://wacv2025.thecvf.com/"
-  date: "2024-07-15 23:59:59"
+- name: "CVPR 2025"
+  url: "https://cvpr.thecvf.com/"
+  date: "2024-11-15 07:59:00"
+  abstract_deadline: "2024-11-08 07:59:00" # Optional
   timezone: "Universal"
-  venue: "Tucson, Arizona, USA"
+  venue: "Music City Center, Nashville TN, USA"
 
-- name: "AAAI 2025"
-  url: "https://aaai.org/aaai-conference/save-the-date-aaai-25/"
-  date: "2024-08-15 23:59:00"
-  abstract_deadline: "2024-08-07 23:59:00" # Optional
+- name: "ICME 2025"
+  url: "https://2025.ieeeicme.org/"
+  date: "2024-12-13 00:00:00"
   timezone: "Universal"
-  venue: "Philadelphia, Pennsylvania, USA"
-
-- name: "WACV 2025 Round 2"
-  url: "https://wacv2025.thecvf.com/"
-  date: "2024-09-09 23:59:00"
-  timezone: "Universal"
-  venue: "Tucson, Arizona, USA"
-
-- name: "ICASSP 2025"
-  url: "https://2025.ieeeicassp.org/"
-  date: "2024-09-09 23:59:00"
-  timezone: "IST"
-  venue: "Hyderabad, India"
-
-- name: "ICLR 2025"
-  url: "https://iclr.cc/"
-  date: "2024-09-21 00:00:00"
-  abstract_deadline: "2024-09-28 00:00:00" # Optional
-  timezone: "Universal"
-  venue: ""
+  venue: "Nantes, France"
   note: "Tentative"
+
+- name: "ICML 2025"
+  url: "https://icml.cc/"
+  date: "2025-01-31 11:59:00"
+  timezone: "Universal"
+  venue: "Vancouver, Canada"
+
+# - name: "ICCV 2025"
+#   url: "https://icml.cc/"
+#   date: "2025-01-31 11:59:00"
+#   timezone: "Universal"
+#   venue: "Vancouver, Canada"
+
+# - name: "WACV 2025 Round 1"
+#   url: "https://wacv2025.thecvf.com/"
+#   date: "2024-07-15 23:59:59"
+#   timezone: "Universal"
+#   venue: "Tucson, Arizona, USA"
+
+# - name: "AAAI 2025"
+#   url: "https://aaai.org/aaai-conference/save-the-date-aaai-25/"
+#   date: "2024-08-15 23:59:00"
+#   abstract_deadline: "2024-08-07 23:59:00" # Optional
+#   timezone: "Universal"
+#   venue: "Philadelphia, Pennsylvania, USA"
+
+# - name: "WACV 2025 Round 2"
+#   url: "https://wacv2025.thecvf.com/"
+#   date: "2024-09-09 23:59:00"
+#   timezone: "Universal"
+#   venue: "Tucson, Arizona, USA"
+
+# - name: "ICASSP 2025"
+#   url: "https://2025.ieeeicassp.org/"
+#   date: "2024-09-09 23:59:00"
+#   timezone: "IST"
+#   venue: "Hyderabad, India"
+
+# - name: "ICLR 2025"
+#   url: "https://iclr.cc/"
+#   date: "2024-09-21 00:00:00"
+#   abstract_deadline: "2024-09-28 00:00:00" # Optional
+#   timezone: "Universal"
+#   venue: ""
+#   note: "Tentative"
 
 # - name: "ECAI 2024"
 #   url: "https://www.ecai2024.eu"
