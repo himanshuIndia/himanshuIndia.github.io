@@ -2,8 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.iiitd.ac.in/'>IIIT Delhi</a>
-subtitle: <a href='https://www.iiitd.ac.in/'>IIIT Delhi</a>
+subtitle: PhD Candidate | <a href='https://www.iiitd.ac.in/'>IIIT Delhi</a>
 
 profile:
   align: right
