@@ -68,6 +68,15 @@ layout: default
 </div>
 
 <script>
+
+function parseDateSafe(dateStr) {
+  // Safari needs ISO format with 'Z' to parse as UTC
+  if (!dateStr.endsWith("Z") && !dateStr.includes("+") && !dateStr.includes("-")) {
+    return new Date(dateStr + "Z");
+  }
+  return new Date(dateStr);
+}
+
 function parseUTCOffset(offsetStr) {
   const match = offsetStr.match(/UTC([+-])(\d{1,2})(?::(\d{2}))?/);
   if (!match) return 0;
@@ -80,7 +89,7 @@ function parseUTCOffset(offsetStr) {
 // ✅ Display the raw date string in UTC, append the offset literally
 function formatDisplayDateUTC(dateStr, offsetStr) {
   try {
-    const date = new Date(dateStr);
+    const date = parseDateSafe(dateStr);
     return date.toUTCString().replace("GMT", "").trim() + " " + offsetStr;
   } catch (e) {
     return "Invalid date";
@@ -90,7 +99,7 @@ function formatDisplayDateUTC(dateStr, offsetStr) {
 // ✅ Countdown calculation based on offset (for accurate UTC-X countdowns)
 function updateCountdown(id, dateStr, offsetStr) {
   try {
-    const localDate = new Date(dateStr);
+    const localDate = parseDateSafe(dateStr);
     const offsetMinutes = parseUTCOffset(offsetStr);
 
     // Apply UTC offset to get true UTC deadline
