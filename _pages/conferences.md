@@ -1,8 +1,8 @@
 ---
 layout: conferences
-title: conferences
-permalink: /conferences/
-nav: false
-nav_order: 1
+title: deadlines
+permalink: /deadlines/
+nav: true
+nav_order: 4
 description:
 ---

@@ -37,8 +37,10 @@ $max-content-width: {{ site.max_width }};
 }
 
 .timer {
-  white-space: nowrap; /* Prevent timer from wrapping onto multiple lines */
+  color: red;
+  font-weight: bold;
 }
+
 
 #countdowns {
   display: flex;
@@ -47,8 +49,8 @@ $max-content-width: {{ site.max_width }};
 }
 
 .conference {
-  flex: 1 1 calc(33.33% - 20px); /* 3 per row */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1 1 100%; /* one per row */
+  box-shadow: 0 0 10px rgba(0,255,0,0.1);
   padding: 20px;
   border-radius: 5px;
 }

@@ -1,75 +1,24 @@
-- name: "CVPR 2025"
-  url: "https://cvpr.thecvf.com/"
-  date: "2024-11-15 07:59:00"
-  abstract_deadline: "2024-11-08 07:59:00" # Optional
-  timezone: "Universal"
-  venue: "Music City Center, Nashville TN, USA"
+- name: WACV 2026
+  url: https://wacv2026.thecvf.com/
+  deadline: 2025-07-15T23:59:00
+  date: NA
+  timezone: "UTC-12"
+  venue: NA, NA
+  note: Deadlines are tentative (based on previous year)
 
-- name: "ICME 2025"
-  url: "https://2025.ieeeicme.org/"
-  date: "2024-12-13 00:00:00"
-  timezone: "Universal"
-  venue: "Nantes, France"
-  note: "Tentative"
+- name: AAAI 2026
+  url: https://aaai.org/conference/aaai/aaai-26/
+  abstract_deadline: 2025-07-25T23:59:00
+  deadline: 2025-08-01T23:59:00
+  date: "January 20 – January 27, 2026"
+  timezone: "UTC-12"
+  venue: Singapore
 
-- name: "ICML 2025"
-  url: "https://icml.cc/"
-  date: "2025-01-31 11:59:00"
-  timezone: "Universal"
-  venue: "Vancouver, Canada"
-
-# - name: "ICCV 2025"
-#   url: "https://icml.cc/"
-#   date: "2025-01-31 11:59:00"
-#   timezone: "Universal"
-#   venue: "Vancouver, Canada"
-
-# - name: "WACV 2025 Round 1"
-#   url: "https://wacv2025.thecvf.com/"
-#   date: "2024-07-15 23:59:59"
-#   timezone: "Universal"
-#   venue: "Tucson, Arizona, USA"
-
-# - name: "AAAI 2025"
-#   url: "https://aaai.org/aaai-conference/save-the-date-aaai-25/"
-#   date: "2024-08-15 23:59:00"
-#   abstract_deadline: "2024-08-07 23:59:00" # Optional
-#   timezone: "Universal"
-#   venue: "Philadelphia, Pennsylvania, USA"
-
-# - name: "WACV 2025 Round 2"
-#   url: "https://wacv2025.thecvf.com/"
-#   date: "2024-09-09 23:59:00"
-#   timezone: "Universal"
-#   venue: "Tucson, Arizona, USA"
-
-# - name: "ICASSP 2025"
-#   url: "https://2025.ieeeicassp.org/"
-#   date: "2024-09-09 23:59:00"
-#   timezone: "IST"
-#   venue: "Hyderabad, India"
-
-# - name: "ICLR 2025"
-#   url: "https://iclr.cc/"
-#   date: "2024-09-21 00:00:00"
-#   abstract_deadline: "2024-09-28 00:00:00" # Optional
-#   timezone: "Universal"
-#   venue: ""
-#   note: "Tentative"
-
-# - name: "ECAI 2024"
-#   url: "https://www.ecai2024.eu"
-#   date: "2024-04-25 00:00:00"
-#   abstract_deadline: "2024-04-19 00:00:00" # Optional
-#   timezone: "Universal"
-#   venue: "Santiago de Compostela, Spain"
-
-# - name: "BMVC 2024"
-#   url: "https://bmvc2024.org"
-#   date: "2024-05-03 10:59:00"
-#   abstract_deadline: "2024-04-26 10:59:00" # Optional
-#   timezone: "Universal"
-#   venue: "Aberdeen, UK"
-
-
-# Add more conferences with their venues and notes as needed
+- name: ICLR 2026
+  url: https://iclr.cc/
+  abstract_deadline: 2025-09-27T23:59:00
+  deadline: 2025-01-01T23:59:00
+  date: NA
+  timezone: "UTC-12"
+  venue: NA, NA
+  note: Deadlines are tentative (based on previous year)

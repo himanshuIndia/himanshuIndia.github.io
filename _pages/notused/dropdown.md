@@ -1,11 +1,11 @@
 ---
 layout: page
 title: more
-nav: true
-nav_order: 4
+nav: false
+nav_order: 5
 dropdown: true
 sitemap: false
 children: 
-    - title: conferences
-      permalink: /conferences/
+    - title: deadlines
+      permalink: /deadlines/
 ---       

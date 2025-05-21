@@ -1,86 +1,139 @@
 ---
 layout: default
 ---
+
 <div class="post">
 
-    <header class="post-header">
-        <h1 class="post-title">ML and CV Conference Deadlines</h1>
-        <p class="post-description">{{ page.description }}</p>
-      </header>
+  <header class="post-header">
+    <h1 class="post-title">ML and CV Conference Deadlines</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
 
-    <article>
-        <div id="countdowns">
-            {% for conference in site.data.conferences %}
-          <div class="conference">
-            <h2><a href="{{ conference.url }}" target="_blank" rel="noopener">{{ conference.name }}</a></h2>
-          
-            <div class="timers">
-              {% if conference.abstract_deadline %}
-              <div class="timer-wrapper">
-                <span><strong>Abstract Deadline:</strong></span>
-                <div class="timer" id="timer-abstract-{{ forloop.index }}" data-date="{{ conference.abstract_deadline }}" data-timezone="{{ conference.timezone }}"></div>
-              </div>
-              {% endif %}
-          
-              <div class="timer-wrapper">
-                <span><strong>Submission Deadline:</strong></span>
-                <div class="timer" id="timer-submission-{{ forloop.index }}" data-date="{{ conference.date }}" data-timezone="{{ conference.timezone }}"></div>
-              </div>
-            </div>
-          
-            <p><strong>Venue:</strong> {{ conference.venue }}</p>
-          
-            {% if conference.note %}
-            <p>Note: {{ conference.note }}</p>
-            {% endif %}
-          </div>
-          <br>
-          {% endfor %}
-          
-          
-          
-          </div>
-    </article>
+  <article>
+    <div id="countdowns">
+  {% for conference in site.data.conferences %}
+    <div class="card mt-1 p-4">
+      <h2>
+        <a href="{{ conference.url }}" target="_blank" rel="noopener">{{ conference.name }}</a>
+      </h2>
 
+      <div class="timers">
+  {% if conference.abstract_deadline %}
+    <div class="timer-wrapper">
+      <span><strong>Abstract Deadline:</strong></span>
+      <span class="actual-date"
+            data-date="{{ conference.abstract_deadline }}"
+            data-timezone="{{ conference.timezone }}"></span>
+      <div class="timer"
+           id="timer-abstract-{{ forloop.index }}"
+           data-date="{{ conference.abstract_deadline }}"
+           data-timezone="{{ conference.timezone }}"></div>
+    </div>
+  {% endif %}
+
+  {% if conference.deadline %}
+    <div class="timer-wrapper">
+      <span><strong>Submission Deadline:</strong></span>
+      <span class="actual-date"
+            data-date="{{ conference.deadline }}"
+            data-timezone="{{ conference.timezone }}"></span>
+      <div class="timer"
+           id="timer-submission-{{ forloop.index }}"
+           data-date="{{ conference.deadline }}"
+           data-timezone="{{ conference.timezone }}"></div>
+    </div>
+  {% endif %}
+
+  {% if conference.date %}
+  <div class="timer-wrapper">
+    <span><strong>Conference Date:</strong></span>
+    <span>{{ conference.date }}</span>
   </div>
+{% endif %}
 
+</div>
+ {% if conference.venue %}
+        <p><strong>Venue:</strong> {{ conference.venue }}</p>
+      {% endif %}
 
+      {% if conference.note %}
+        <p>Note: {{ conference.note }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
 
+  </article>
+
+</div>
 
 <script>
-function updateCountdown(id, endDateInConferenceTimeZone, timeZone) {
-  // Convert both times to UTC and then find the difference
-  const nowUTC = new Date().getTime();
-  const deadlineUTC = endDateInConferenceTimeZone - (new Date(new Intl.DateTimeFormat('en-US', { timeZone: timeZone }).format(endDateInConferenceTimeZone)).getTimezoneOffset() * 60000);
-  
-  const distance = deadlineUTC - nowUTC;
-
-  if (distance < 0) {
-    document.getElementById(id).innerHTML = "EXPIRED";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById(id).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+function parseUTCOffset(offsetStr) {
+  const match = offsetStr.match(/UTC([+-])(\d{1,2})(?::(\d{2}))?/);
+  if (!match) return 0;
+  const sign = match[1] === "+" ? 1 : -1;
+  const hours = parseInt(match[2], 10);
+  const minutes = parseInt(match[3] || "0", 10);
+  return sign * (hours * 60 + minutes);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const timers = document.querySelectorAll("[id^=timer-]");
-  timers.forEach(function(timer) {
+// ✅ Display the raw date string in UTC, append the offset literally
+function formatDisplayDateUTC(dateStr, offsetStr) {
+  try {
+    const date = new Date(dateStr);
+    return date.toUTCString().replace("GMT", "").trim() + " " + offsetStr;
+  } catch (e) {
+    return "Invalid date";
+  }
+}
+
+// ✅ Countdown calculation based on offset (for accurate UTC-X countdowns)
+function updateCountdown(id, dateStr, offsetStr) {
+  try {
+    const localDate = new Date(dateStr);
+    const offsetMinutes = parseUTCOffset(offsetStr);
+
+    // Apply UTC offset to get true UTC deadline
+    const deadlineUTC = localDate.getTime() - (offsetMinutes * 60 * 1000);
+    const nowUTC = new Date().getTime();
+
+    const distance = deadlineUTC - nowUTC;
+
+    let output = "EXPIRED";
+    if (distance > 0) {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      output = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    const el = document.getElementById(id);
+    if (el) el.textContent = output;
+  } catch (err) {
+    console.error("Countdown error:", id, err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Display raw UTC date + offset string
+  document.querySelectorAll(".actual-date").forEach(el => {
+    const dateStr = el.getAttribute("data-date");
+    const offsetStr = el.getAttribute("data-timezone");
+    el.textContent = formatDisplayDateUTC(dateStr, offsetStr);
+  });
+
+  // Update countdown timers
+  document.querySelectorAll("[id^=timer-]").forEach(timer => {
     const dateStr = timer.getAttribute("data-date");
-    const timeZone = timer.getAttribute("data-timezone");
-    
-    const endDateInConferenceTimeZone = new Date(dateStr);
-    
-    updateCountdown(timer.id, endDateInConferenceTimeZone, timeZone);
-    setInterval(function() {
-      updateCountdown(timer.id, endDateInConferenceTimeZone, timeZone);
+    const offsetStr = timer.getAttribute("data-timezone");
+
+    updateCountdown(timer.id, dateStr, offsetStr);
+    setInterval(() => {
+      updateCountdown(timer.id, dateStr, offsetStr);
     }, 1000);
   });
 });
-
 </script>
+
+
