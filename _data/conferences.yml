@@ -29,3 +29,11 @@
   date: NA
   timezone: "UTC-12"
   venue: To be updated
+
+- name: CVPR 2026
+  url: https://openreview.net/group?id=thecvf.com/CVPR/2026/Conference&referrer=%5BHomepage%5D(%2F)#tab-recent-activity
+  abstract_deadline: "2025-11-07T11:59:00Z"
+  deadline: "2025-11-14T11:59:00Z"
+  date: Jun 06 2026
+  timezone: "UTC-0"
+  venue: Denver, Colorado, United States
