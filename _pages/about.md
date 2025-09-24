@@ -23,6 +23,8 @@ I am a researcher in the field of Machine Learning, currently pursuing my Ph.D. 
 
 Prior to my doctoral journey, I gained invaluable industry experience as a Research Scientist at [Animaker](https://www.animaker.com/). Working in a dynamic environment, I honed my skills in applying cutting-edge machine learning techniques to real-world problems. I worked on building the text to video tool [Steve AI](https://www.steve.ai/) This experience provided me with a practical perspective and strengthened my ability to bridge the gap between academia and industry.
 
+Currently a visiting scholar at [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/).
+
 Thank you for visiting my website. I am always open to exciting opportunities and collaborations. Feel free to reach out to me if you have any questions or would like to discuss potential collaborations. I look forward to connecting with you!
 
 ---
