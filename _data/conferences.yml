@@ -14,7 +14,7 @@
   timezone: "UTC-0"
   venue: Denver, Colorado, United States
 
-  - name: WACV 2026 Round 1
+- name: WACV 2026 Round 1
   url: https://wacv.thecvf.com/
   abstract_deadline: "2025-07-11T23:59:00Z"
   deadline: "2025-07-18T23:59:00Z"
