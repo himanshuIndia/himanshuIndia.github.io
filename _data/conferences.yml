@@ -1,11 +1,3 @@
-- name: ICLR 2026
-  url: https://iclr.cc/Conferences/2026
-  abstract_deadline: "2025-09-19T23:59:00Z"
-  deadline: "2025-09-24T23:59:00Z"
-  date: NA
-  timezone: "UTC-12"
-  venue: To be updated
-
 - name: CVPR 2026
   url: https://openreview.net/group?id=thecvf.com/CVPR/2026/Conference&referrer=%5BHomepage%5D(%2F)#tab-recent-activity
   abstract_deadline: "2025-11-07T11:59:00Z"
@@ -14,26 +6,74 @@
   timezone: "UTC-0"
   venue: Denver, Colorado, United States
 
-- name: WACV 2026 Round 1
-  url: https://wacv.thecvf.com/
-  abstract_deadline: "2025-07-11T23:59:00Z"
-  deadline: "2025-07-18T23:59:00Z"
-  date: Friday, March 6 - Tuesday, March 10, 2026
+- name: ICME 2026
+  url: https://attend.ieee.org/icme-2026/
+  deadline: "2025-12-15T23:59:00Z"
+  date: 6-10 July 2026
   timezone: "UTC-12"
-  venue: Tucson, Arizona, USA
+  venue: Bangkok, Thailand
 
-- name: AAAI 2026
-  url: https://aaai.org/conference/aaai/aaai-26/
-  abstract_deadline: "2025-07-25T23:59:00Z"
-  deadline: "2025-08-01T23:59:00Z"
-  date: "January 20 – January 27, 2026"
+- name: IJCAI 2026
+  url: https://2026.ijcai.org
+  abstract_deadline: TBA
+  deadline: TBA
+  date: 15-21 August 2026
   timezone: "UTC-12"
-  venue: Singapore
+  venue: Bremen, Germany
 
-- name: WACV 2026 Round 2
-  url: https://wacv.thecvf.com/
-  abstract_deadline: "2025-09-12T23:59:00Z"
-  deadline: "2025-09-19T23:59:00Z"
-  date: Friday, March 6 - Tuesday, March 10, 2026
+- name: ICML 2026
+  url: https://icml.cc/Conferences/2026
+  abstract_deadline: TBA
+  deadline: TBA
+  date: TBA
   timezone: "UTC-12"
-  venue: Tucson, Arizona, USA
+  venue: Seoul, Republic of Korea
+
+- name: ECCV 2026
+  url: https://eccv.ecva.net
+  abstract_deadline: "2026-03-06T23:59:00Z"
+  deadline: "2026-03-06T23:59:00Z"
+  date: 8–13 September 2026
+  timezone: "UTC-12"
+  venue: Malmö, Sweden
+  note: Tentative
+
+- name: ICIP 2026
+  url: https://2026.ieeeicip.org
+  abstract_deadline: TBA
+  deadline: TBA
+  date: 13-17 September 2026
+  timezone: "UTC-12"
+  venue: Tampere, Finland
+
+# - name: WACV 2026 Round 1
+#   url: https://wacv.thecvf.com/
+#   abstract_deadline: "2025-07-11T23:59:00Z"
+#   deadline: "2025-07-18T23:59:00Z"
+#   date: Friday, March 6 - Tuesday, March 10, 2026
+#   timezone: "UTC-12"
+#   venue: Tucson, Arizona, USA
+
+# - name: AAAI 2026
+#   url: https://aaai.org/conference/aaai/aaai-26/
+#   abstract_deadline: "2025-07-25T23:59:00Z"
+#   deadline: "2025-08-01T23:59:00Z"
+#   date: "January 20 – January 27, 2026"
+#   timezone: "UTC-12"
+#   venue: Singapore
+
+# - name: WACV 2026 Round 2
+#   url: https://wacv.thecvf.com/
+#   abstract_deadline: "2025-09-12T23:59:00Z"
+#   deadline: "2025-09-19T23:59:00Z"
+#   date: Friday, March 6 - Tuesday, March 10, 2026
+#   timezone: "UTC-12"
+#   venue: Tucson, Arizona, USA
+
+# - name: ICLR 2026
+#   url: https://iclr.cc/Conferences/2026
+#   abstract_deadline: "2025-09-19T23:59:00Z"
+#   deadline: "2025-09-24T23:59:00Z"
+#   date: NA
+#   timezone: "UTC-12"
+#   venue: To be updated
