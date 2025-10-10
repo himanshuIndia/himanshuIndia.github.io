@@ -20,6 +20,7 @@
   date: 15-21 August 2026
   timezone: "UTC-12"
   venue: Bremen, Germany
+  note: TBA
 
 - name: ICML 2026
   url: https://icml.cc/Conferences/2026
@@ -28,6 +29,7 @@
   date: 6-12 July 2026
   timezone: "UTC-12"
   venue: Seoul, Republic of Korea
+  note: TBA
 
 - name: ECCV 2026
   url: https://eccv.ecva.net
@@ -45,6 +47,7 @@
   date: 13-17 September 2026
   timezone: "UTC-12"
   venue: Tampere, Finland
+  note: TBA
 
 # - name: WACV 2026 Round 1
 #   url: https://wacv.thecvf.com/
