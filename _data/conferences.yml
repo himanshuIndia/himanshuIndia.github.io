@@ -1,53 +1,77 @@
-- name: CVPR 2026
-  url: https://openreview.net/group?id=thecvf.com/CVPR/2026/Conference&referrer=%5BHomepage%5D(%2F)#tab-recent-activity
-  abstract_deadline: "2025-11-07T11:59:00Z"
-  deadline: "2025-11-14T11:59:00Z"
-  date: Jun 06 2026
-  timezone: "UTC-0"
-  venue: Denver, Colorado, United States
-
-- name: ICME 2026
-  url: https://attend.ieee.org/icme-2026/
-  deadline: "2025-12-15T23:59:00Z"
-  date: 6-10 July 2026
-  timezone: "UTC-12"
-  venue: Bangkok, Thailand
-
-- name: IJCAI 2026
-  url: https://2026.ijcai.org
-  abstract_deadline: TBA
-  deadline: TBA
-  date: 15-21 August 2026
-  timezone: "UTC-12"
-  venue: Bremen, Germany
-  note: TBA
-
-- name: ICML 2026
-  url: https://icml.cc/Conferences/2026
-  abstract_deadline: TBA
-  deadline: TBA
-  date: 6-12 July 2026
-  timezone: "UTC-12"
-  venue: Seoul, Republic of Korea
-  note: TBA
-
 - name: ECCV 2026
   url: https://eccv.ecva.net
-  abstract_deadline: "2026-03-06T23:59:00Z"
-  deadline: "2026-03-06T23:59:00Z"
+  abstract_deadline: "2026-02-26T10:00:00Z"
+  deadline: "2026-03-05T10:00:00Z"
   date: 8–13 September 2026
   timezone: "UTC-12"
   venue: Malmö, Sweden
-  note: Tentative
 
-- name: ICIP 2026
-  url: https://2026.ieeeicip.org
-  abstract_deadline: TBA
-  deadline: TBA
-  date: 13-17 September 2026
+- name: ACL Rolling Review (March 2026)
+  url: https://aclrollingreview.org/dates
+  # abstract_deadline: "2026-05-22T23:59:00Z"
+  deadline: "2026-03-16T23:59:00Z"
+  # date: 23-26 November 2026
   timezone: "UTC-12"
-  venue: Tampere, Finland
-  note: TBA
+  venue: N/A
+
+- name: ACMMM 2026
+  url: https://2026.acmmm.org
+  abstract_deadline: "2026-03-25T23:59:00Z"
+  deadline: "2026-04-01T23:59:00Z"
+  date: 10-14 November 2026
+  timezone: "UTC-12"
+  venue: Rio de Janeiro, Brazil
+
+- name: BMVC 2026
+  url: https://bmvc2026.bmva.org/
+  abstract_deadline: "2026-05-22T23:59:00Z"
+  deadline: "2026-05-29T23:59:00Z"
+  date: 23-26 November 2026
+  timezone: "UTC-12"
+  venue: Lancaster, UK
+
+
+# - name: ICIP 2026
+#   url: https://2026.ieeeicip.org
+#   abstract_deadline: TBA
+#   deadline: TBA
+#   date: 13-17 September 2026
+#   timezone: "UTC-12"
+#   venue: Tampere, Finland
+#   note: TBA
+
+# - name: CVPR 2026
+#   url: https://openreview.net/group?id=thecvf.com/CVPR/2026/Conference&referrer=%5BHomepage%5D(%2F)#tab-recent-activity
+#   abstract_deadline: "2025-11-07T11:59:00Z"
+#   deadline: "2025-11-14T11:59:00Z"
+#   date: Jun 06 2026
+#   timezone: "UTC-0"
+#   venue: Denver, Colorado, United States
+
+# - name: ICME 2026
+#   url: https://attend.ieee.org/icme-2026/
+#   deadline: "2025-12-15T23:59:00Z"
+#   date: 6-10 July 2026
+#   timezone: "UTC-12"
+#   venue: Bangkok, Thailand
+
+# - name: IJCAI 2026
+#   url: https://2026.ijcai.org
+#   abstract_deadline: TBA
+#   deadline: TBA
+#   date: 15-21 August 2026
+#   timezone: "UTC-12"
+#   venue: Bremen, Germany
+#   note: TBA
+
+# - name: ICML 2026
+#   url: https://icml.cc/Conferences/2026
+#   abstract_deadline: TBA
+#   deadline: TBA
+#   date: 6-12 July 2026
+#   timezone: "UTC-12"
+#   venue: Seoul, Republic of Korea
+#   note: TBA
 
 # - name: WACV 2026 Round 1
 #   url: https://wacv.thecvf.com/
