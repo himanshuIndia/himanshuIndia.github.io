@@ -19,15 +19,29 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a researcher in the field of Machine Learning, currently pursuing my Ph.D. at [IIIT Delhi](https://www.iiitd.ac.in/) where I am a part of [Visual Conception Group](https://vcg.iiitd.edu.in/) working under the guidance of [Dr. AV Subramanyam](https://www.iiitd.ac.in/subramanyam). With a specific focus on adversarial attacks, I delve deep into understanding the vulnerabilities of machine learning models and devising robust defenses against malicious manipulations.
+I am a Ph.D. candidate in Machine Learning at [IIIT Delhi](https://www.iiitd.ac.in/) where I am part of the [Visual Conception Group](https://vcg.iiitd.edu.in/) under the supervision of [Dr. AV Subramanyam](https://www.iiitd.ac.in/subramanyam). My research focuses on robustness, security, and alignment of modern machine learning systems. I study the vulnerabilities of deep neural networks to adversarial attacks and design principled defenses grounded in representation learning, geometry, and optimization.
+
+My work spans adversarial training, projection-based feature regularization, diffusion-based purification methods, and systematic robustness evaluation under white-box and gray-box threat models. I am particularly interested in understanding how representation geometry influences adversarial vulnerability and generalization.
+
+I recently completed a Visiting Scholar position at the [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/), where I worked on foundational model alignment and LLM/VLM security, including neuron-level interventions, value steering, and probing alignment under adversarial prompts.
+
+Prior to academia, I worked as a Research Scientist at [Animaker](https://www.animaker.com/), contributing to the development of the text-to-video system [Steve AI](https://www.steve.ai/). This experience strengthened my interest in building AI systems that bridge theoretical insight with real-world deployment.
+
+I am broadly interested in trustworthy and controllable AI. I welcome collaborations and discussions at the intersection of robustness, alignment, and security.
+
+---
+<!-- 12 feb 2026 -->
+<!-- I am a researcher in the field of Machine Learning, currently pursuing my Ph.D. at [IIIT Delhi](https://www.iiitd.ac.in/) where I am a part of [Visual Conception Group](https://vcg.iiitd.edu.in/) working under the guidance of [Dr. AV Subramanyam](https://www.iiitd.ac.in/subramanyam). With a specific focus on adversarial attacks, I delve deep into understanding the vulnerabilities of machine learning models and devising robust defenses against malicious manipulations.
 
 Prior to my doctoral journey, I gained invaluable industry experience as a Research Scientist at [Animaker](https://www.animaker.com/). Working in a dynamic environment, I honed my skills in applying cutting-edge machine learning techniques to real-world problems. I worked on building the text to video tool [Steve AI](https://www.steve.ai/) This experience provided me with a practical perspective and strengthened my ability to bridge the gap between academia and industry.
 
 Currently a visiting scholar at [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/).
 
-Thank you for visiting my website. I am always open to exciting opportunities and collaborations. Feel free to reach out to me if you have any questions or would like to discuss potential collaborations. I look forward to connecting with you!
+Thank you for visiting my website. I am always open to exciting opportunities and collaborations. Feel free to reach out to me if you have any questions or would like to discuss potential collaborations. I look forward to connecting with you! -->
 
----
+
+
+
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 I am a researcher in the field of Machine Learning, currently pursuing my Ph.D. at [IIIT Delhi](https://www.iiitd.ac.in/) where I am a part of [Visual Conception Group](https://vcg.iiitd.edu.in/). With a specific focus on adversarial attacks, I delve deep into understanding the vulnerabilities of machine learning models and devising robust defenses against malicious manipulations. Under the guidance of [Dr. AV Subramanyam](https://www.iiitd.ac.in/subramanyam), I am fortunate to be at the forefront of groundbreaking research.
 
