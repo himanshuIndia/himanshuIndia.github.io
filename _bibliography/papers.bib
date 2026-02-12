@@ -1,24 +1,26 @@
 @misc{singh2026promptsguaranteesafetymitigating,
       title={Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Subspace Intervention}, 
-      author={Himanshu Singh and Ziwei Xu and A. V. Subramanyam and Mohan Kankanhalli},
+      author={Singh, Himanshu and Xu, Ziwei and Subramanyam, A V and Kankanhalli, Mohan},
       year={2026},
       eprint={2602.06623},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       selected={false},
       url={https://arxiv.org/abs/2602.06623},
+      arxiv={2602.06623},
       abstract={Large Language Models (LLMs) are powerful text generators, yet they can produce toxic or harmful content even when given seemingly harmless prompts. This presents a serious safety challenge and can cause real-world harm. Toxicity is often subtle and context-dependent, making it difficult to detect at the token level or through coarse sentence-level signals. Moreover, efforts to mitigate toxicity often face a trade-off between safety and the coherence, or fluency of the generated text. In this work, we present a targeted subspace intervention strategy for identifying and suppressing hidden toxic patterns from underlying model representations, while preserving overall ability to generate safe fluent content. On the RealToxicityPrompts, our method achieves strong mitigation performance compared to existing baselines, with minimal impact on inference complexity. Across multiple LLMs, our approach reduces toxicity of state-of-the-art detoxification systems by 8-20%, while maintaining comparable fluency. Through extensive quantitative and qualitative analyses, we show that our approach achieves effective toxicity reduction without impairing generative performance, consistently outperforming existing baselines.}
       }
 
 @misc{singh2025nearestneighborprojectionremoval,
       title={Nearest Neighbor Projection Removal Adversarial Training}, 
-      author={Himanshu Singh and A. V. Subramanyam and Shivank Rajput and Mohan Kankanhalli},
+      author={Singh, Himanshu and Subramanyam, A V and Rajput, Shivank and Kankanhalli, Mohan},
       year={2025},
       eprint={2509.07673},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2509.07673},
       selected={false},
+      arxiv={2509.07673},
       abstract={Deep neural networks have exhibited impressive performance in image classification tasks but remain vulnerable to adversarial examples. Standard adversarial training enhances robustness but typically fails to explicitly address inter-class feature overlap, a significant contributor to adversarial susceptibility. In this work, we introduce a novel adversarial training framework that actively mitigates inter-class proximity by projecting out inter-class dependencies from adversarial and clean samples in the feature space. Specifically, our approach first identifies the nearest inter-class neighbors for each adversarial sample and subsequently removes projections onto these neighbors to enforce stronger feature separability. Theoretically, we demonstrate that our proposed logits correction reduces the Lipschitz constant of neural networks, thereby lowering the Rademacher complexity, which directly contributes to improved generalization and robustness. Extensive experiments across standard benchmarks including CIFAR-10, CIFAR-100, and SVHN show that our method demonstrates strong performance that is competitive with leading adversarial training techniques, highlighting significant achievements in both robust and clean accuracy. Our findings reveal the importance of addressing inter-class feature proximity explicitly to bolster adversarial robustness in DNNs.}
       }
 

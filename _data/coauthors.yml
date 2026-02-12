@@ -2,6 +2,18 @@
   - firstname: ["A V"]
     url: https://iiitd.ac.in/subramanyam
 
+"Kankanhalli":
+  - firstname: ["Mohan"]
+    url: https://www.comp.nus.edu.sg/~mohan/
+
+"Xu":
+  - firstname: ["Ziwei"]
+    url: https://home.ziwei-xu.com/
+
+"Rajput":
+  - firstname: ["Shivank"]
+    url: 
+
 #     "Adams":
 #   - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
 #     url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
