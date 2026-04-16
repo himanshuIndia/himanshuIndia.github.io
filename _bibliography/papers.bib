@@ -13,23 +13,24 @@
       }
 
 @misc{singh2026nearestneighborprojectionremoval,
-      title={Nearest Neighbor Projection Removal Adversarial Training}, 
-      author={Singh, Himanshu and Subramanyam, A V and Rajput, Shivank and Kankanhalli, Mohan},
+      title         = {{Nearest Neighbor Projection Removal Adversarial Training}},
+      author        = {Singh, Himanshu and Subramanyam, A V and Rajput, Shivank and Kankanhalli, Mohan},
       booktitle     = {IEEE Transactions on Artificial Intelligence},
       abbr          = {IEEE TAI},
       month         = {April},
-      year={2026},
-      eprint={2509.07673},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2509.07673},
+      url           = {https://arxiv.org/abs/2509.07673},
+      year          = {2026},
+      abstract      = {Deep neural networks have exhibited impressive performance in image classification tasks but remain vulnerable to adversarial examples. Standard adversarial training enhances robustness but typically fails to explicitly address inter-class feature overlap, a significant contributor to adversarial susceptibility. In this work, we introduce a novel adversarial training framework that actively mitigates inter-class proximity by projecting out inter-class dependencies from adversarial and clean samples in the feature space. Specifically, our approach first identifies the nearest inter-class neighbors for each adversarial sample and subsequently removes projections onto these neighbors to enforce stronger feature separability. Theoretically, we demonstrate that our proposed logits correction reduces the Lipschitz constant of neural networks, thereby lowering the Rademacher complexity, which directly contributes to improved generalization and robustness. Extensive experiments across standard benchmarks including CIFAR-10, CIFAR-100, and SVHN show that our method demonstrates strong performance that is competitive with leading adversarial training techniques, highlighting significant achievements in both robust and clean accuracy. Our findings reveal the importance of addressing inter-class feature proximity explicitly to bolster adversarial robustness in DNNs.},
+      code          = {https://github.com/Visual-Conception-Group/LGAP},
       preview       = {nnprat.jpg},
-      arxiv={2509.07673},
-      selected      = {true},
+      eprint        = {2509.07673},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CV},
+      arxiv         = {2509.07673},
       doi           = {10.1109/TAI.2026.3681719},
       ieee          = {https://ieeexplore.ieee.org/document/11475647},
-      abstract={Deep neural networks have exhibited impressive performance in image classification tasks but remain vulnerable to adversarial examples. Standard adversarial training enhances robustness but typically fails to explicitly address inter-class feature overlap, a significant contributor to adversarial susceptibility. In this work, we introduce a novel adversarial training framework that actively mitigates inter-class proximity by projecting out inter-class dependencies from adversarial and clean samples in the feature space. Specifically, our approach first identifies the nearest inter-class neighbors for each adversarial sample and subsequently removes projections onto these neighbors to enforce stronger feature separability. Theoretically, we demonstrate that our proposed logits correction reduces the Lipschitz constant of neural networks, thereby lowering the Rademacher complexity, which directly contributes to improved generalization and robustness. Extensive experiments across standard benchmarks including CIFAR-10, CIFAR-100, and SVHN show that our method demonstrates strong performance that is competitive with leading adversarial training techniques, highlighting significant achievements in both robust and clean accuracy. Our findings reveal the importance of addressing inter-class feature proximity explicitly to bolster adversarial robustness in DNNs.}
-      }
+      selected      = {true}
+}
 
 @inproceedings{singh2023language,
   title         = {{Language Guided Adversarial Purification}},
