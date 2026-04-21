@@ -24,6 +24,7 @@ hr {
 }
 
 table {
+
   td,
   th {
     font-size: 1rem;
@@ -50,7 +51,8 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
-  &.table-bordered{
+
+  &.table-bordered {
     border: 1px solid var(--global-divider-color) !important;
   }
 }
@@ -80,7 +82,12 @@ blockquote {
       color: var(--global-tip-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-tip-block-title);
     }
   }
@@ -93,7 +100,12 @@ blockquote {
       color: var(--global-warning-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-warning-block-title);
     }
   }
@@ -106,7 +118,12 @@ blockquote {
       color: var(--global-danger-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-danger-block-title);
     }
   }
@@ -383,11 +400,11 @@ blockquote {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.wechat-modal > img {
+.wechat-modal>img {
   display: block;
   position: relative;
   top: 50%;
@@ -397,8 +414,8 @@ blockquote {
   transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 400px){
-  .wechat-modal > img {
+@media only screen and (max-width: 400px) {
+  .wechat-modal>img {
     width: 100%;
   }
 }
@@ -696,6 +713,45 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
 
+      .pub-footnote-mark {
+        color: var(--global-theme-color);
+        font-size: 0.75em;
+        font-weight: bold;
+      }
+
+      .pub-footnotes {
+        margin-top: 0.4rem;
+        padding-top: 0.3rem;
+        border-top: 1px dashed var(--global-divider-color);
+        font-size: 0.8rem;
+        color: var(--global-text-color-light);
+        font-style: italic;
+
+        .pub-footnote {
+          display: inline-block;
+          margin-right: 1rem;
+
+          sup {
+            color: var(--global-theme-color);
+            font-weight: bold;
+            font-style: normal;
+          }
+
+          i {
+            font-size: 0.7rem;
+            margin-right: 0.15rem;
+          }
+
+          i.fa-file-alt {
+            color: #e67e22;
+          }
+
+          i.fa-clock {
+            color: #1abc9c;
+          }
+        }
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
@@ -742,6 +798,7 @@ footer.sticky-bottom {
 
       .badges {
         padding-bottom: 0.5rem;
+
         span {
           display: inline-block;
           color: $black-color;
@@ -977,7 +1034,8 @@ progress::-moz-progress-bar {
     }
   }
 
-  .dropdown-item.active, .dropdown-item:active {
+  .dropdown-item.active,
+  .dropdown-item:active {
     background-color: var(--global-hover-color);
     color: var(--global-hover-text-color) !important;
 
@@ -1019,6 +1077,7 @@ nav[data-toggle="toc"] {
 
 /* small screens */
 @media (max-width: 576px) {
+
   /* override stickyness so that the navigation does not follow scrolling */
   nav[data-toggle="toc"] {
     visibility: hidden;
