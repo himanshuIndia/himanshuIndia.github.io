@@ -1,26 +1,18 @@
-- name: ECCV 2026
-  url: https://eccv.ecva.net
-  abstract_deadline: "2026-02-26T10:00:00Z"
-  deadline: "2026-03-05T10:00:00Z"
-  date: 8–13 September 2026
+- name: NeurIPS 2026
+  url: https://neurips.cc
+  abstract_deadline: "2026-05-04T23:59:00Z"
+  deadline: "2026-05-06T23:59:00Z"
+  date: 6-12 December 2026
   timezone: "UTC-12"
-  venue: Malmö, Sweden
+  venue: Sydney, Australia
 
-- name: ACL Rolling Review (March 2026)
+- name: ACL Rolling Review (May 2026)
   url: https://aclrollingreview.org/dates
   # abstract_deadline: "2026-05-22T23:59:00Z"
-  deadline: "2026-03-16T23:59:00Z"
+  deadline: "2026-05-25T23:59:00Z"
   # date: 23-26 November 2026
   timezone: "UTC-12"
   venue: N/A
-
-- name: ACMMM 2026
-  url: https://2026.acmmm.org
-  abstract_deadline: "2026-03-25T23:59:00Z"
-  deadline: "2026-04-01T23:59:00Z"
-  date: 10-14 November 2026
-  timezone: "UTC-12"
-  venue: Rio de Janeiro, Brazil
 
 - name: BMVC 2026
   url: https://bmvc2026.bmva.org/
@@ -29,6 +21,23 @@
   date: 23-26 November 2026
   timezone: "UTC-12"
   venue: Lancaster, UK
+
+- name: ECCV 2026
+  url: https://eccv.ecva.net
+  abstract_deadline: "2026-02-26T10:00:00Z"
+  deadline: "2026-03-05T10:00:00Z"
+  date: 8–13 September 2026
+  timezone: "UTC-12"
+  venue: Malmö, Sweden
+
+
+- name: ACMMM 2026
+  url: https://2026.acmmm.org
+  abstract_deadline: "2026-03-25T23:59:00Z"
+  deadline: "2026-04-01T23:59:00Z"
+  date: 10-14 November 2026
+  timezone: "UTC-12"
+  venue: Rio de Janeiro, Brazil
 
 
 # - name: ICIP 2026
