@@ -1,6 +1,13 @@
 ---
 version: 1
 overrides:
+  _includes/cv/experience.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.2
+    upstream_path: templates/cv/experience.liquid
+    upstream_sha256: 901c87d2e97fea8a679d811e83893267b10eec6ae65b34aee95d8948c5c56c2a
+    local_sha256: 62a5dd2c0384869ffc5cb6cf382df3baf6f0d9dc51732b27c54008a2f6730518
+    acknowledged_at: '2026-08-07'
   _layouts/about.liquid:
     owner: al_folio_core
     gem_version: 1.0.12
@@ -13,5 +20,12 @@ overrides:
     gem_version: 1.0.12
     upstream_path: _layouts/bib.liquid
     upstream_sha256: 430311d9b94adf6fb1c2fab7609f6e726efc98e2b50e7b1c4cde0ad654c04506
-    local_sha256: 46e8156db5414ee76745c58e0079d83fea48ea96a823267c24376a7df111ad82
+    local_sha256: 07da67bc3689f2e3721b6d0cd59d3d6fc8a2f1223aacd21a98e69b45aec4374b
+    acknowledged_at: '2026-08-07'
+  _layouts/cv.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.12
+    upstream_path: _layouts/cv.liquid
+    upstream_sha256: c586e8051e785b492a0f4452c4e06798d47a8c363d29487e48de4fcd9851700e
+    local_sha256: 27f573c431c97e021a40eaaff6d1db1d600d45bd0f013049824782503ab66660
     acknowledged_at: '2026-08-07'

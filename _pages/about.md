@@ -34,11 +34,9 @@ I am a Ph.D. candidate in Machine Learning at [IIIT Delhi](https://www.iiitd.ac.
 
 My work spans adversarial training, projection-based feature regularization, diffusion-based purification methods, and systematic robustness evaluation under white-box and gray-box threat models. I am particularly interested in understanding how representation geometry influences adversarial vulnerability and generalization.
 
-I am currently an Applied Sciences Intern at [Microsoft](https://www.microsoft.com/en-in/msidc/) in Bangalore. Before that I was a Visiting Scholar at the [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/), where I worked on foundational model alignment and LLM/VLM security, including neuron-level interventions, value steering, and probing alignment under adversarial prompts.
+I recently completed an Applied Sciences internship at [Microsoft](https://www.microsoft.com/en-in/msidc/) in Bangalore. Before that, I was a Visiting Scholar at the [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/), where I worked on foundational model alignment and LLM/VLM security, including neuron-level interventions, value steering, and probing alignment under adversarial prompts.
 
-My work on adversarial defenses has resulted in two granted Indian patents, and my research has appeared in IEEE Transactions on Artificial Intelligence and at ICASSP.
-
-Prior to academia, I worked as a Research Scientist at [Animaker](https://www.animaker.com/), contributing to the development of the text-to-video system [Steve AI](https://www.steve.ai/). This experience strengthened my interest in building AI systems that bridge theoretical insight with real-world deployment.
+Before joining my PhD, I worked as a Research Scientist at [Animaker](https://www.animaker.com/), contributing to the development of the text-to-video system [Steve AI](https://www.steve.ai/). This experience strengthened my interest in building AI systems that bridge theoretical insight with real-world deployment.
 
 I am broadly interested in trustworthy and controllable AI. I welcome collaborations and discussions at the intersection of robustness, alignment, and security.
 

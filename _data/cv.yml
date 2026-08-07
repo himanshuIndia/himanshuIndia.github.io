@@ -33,6 +33,7 @@ cv:
         position: Applied Sciences Intern
         location: Bangalore, India
         start_date: "2026-05"
+        end_date: "2026-07"
 
       - company: National University of Singapore
         position: Visiting Scholar
@@ -61,7 +62,7 @@ cv:
         start_date: "2020-08"
         end_date: "2024-05"
         highlights:
-          - "Advances in Deep Learning (M'23) — Best TA Award"
+          - "Advances in Deep Learning (M'23) — Dean's List, Best TA Award"
           - "Statistical Machine Learning (W'22, W'23, W'24, W'25)"
           - "Digital Image Processing (M'21, M'22); Computer Vision (W'21);
             Natural Language Processing (M'20)"
@@ -102,6 +103,7 @@ cv:
         location: Delhi, India
         start_date: "2020-08"
         highlights:
+          - "Research Area: AI Safety"
           - "Advisor: Dr. A. V. Subramanyam"
           - "CGPA: 8.24"
           - "Coursework: Advanced Machine Learning, Deep Learning, Machine
@@ -130,7 +132,7 @@ cv:
       - bullet: Volunteer, IEEE ICASSP 2024
 
     Awards:
-      - title: Best TA Award — Advances in Deep Learning
+      - title: Dean's List — Best TA Award, Advances in Deep Learning
         awarder: IIIT Delhi
       - title: Best Performance — research award for outstanding performance
         awarder: Animaker Inc.

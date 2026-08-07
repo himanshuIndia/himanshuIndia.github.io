@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  Local override of al_folio_core's cv.liquid. Body is identical to the gem's;
+  the only addition is the scoped <style> block below.
+
+  Two defects it corrects, both from Bootstrap-era class names that have no rule
+  in v1's Tailwind build (al_folio.compat.bootstrap.enabled is false here):
+
+  1. Each CV entry is <li class="list-group-item"> inside
+     <ul class="list-group list-group-flush">. `.list-group-flush` is undefined,
+     so every entry rendered a stray disc bullet and a 40px indent.
+  2. `.date-column` carries `text-center`, so date badges of differing widths
+     ("2020 - Present" vs "2025 - 2025") started at different x positions and
+     the column looked ragged.
+{%- endcomment -%}
+
+<style>
+  .cv .list-group {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .cv .list-group-item {
+    list-style: none;
+  }
+  .cv .list-group-item::marker {
+    content: "";
+  }
+  /* left-align the date/location column so badges form a clean edge */
+  .cv .date-column {
+    text-align: left;
+  }
+  .cv .date-column .table-cv {
+    width: 100%;
+  }
+  .cv .date-column .badge {
+    display: inline-block;
+  }
+  .cv .date-column .location {
+    margin: 0.35rem 0 0;
+    white-space: nowrap;
+  }
+  /* Highlights list: tighten the browser-default 40px indent, and match the
+     1.5rem margin the entry title carries via `ml-md-4` so the bullets sit
+     under the title instead of hanging out to its left. */
+  .cv ul.items {
+    padding-left: 1.15rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+  }
+  .cv ul.items li {
+    margin-bottom: 0.15rem;
+  }
+</style>
+
+{% assign cv_feature_enabled = site.al_folio.features.cv.enabled | default: true %}
+
+{% if site.plugins contains 'al_folio_cv' and cv_feature_enabled %}
+  {% al_folio_cv_render %}
+{% else %}
+  <div class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-description">CV rendering is unavailable.</p>
+    </header>
+    <article>
+      <p>Enable the <code>al_folio_cv</code> plugin and set <code>al_folio.features.cv.enabled: true</code> to render this page.</p>
+    </article>
+  </div>
+{% endif %}
