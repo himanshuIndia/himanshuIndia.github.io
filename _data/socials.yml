@@ -1,0 +1,15 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+#
+# NOTE: in al-folio <= v0.14 these lived as top-level keys in _config.yml
+# (github_username, orcid_id, ...). v0.16 moved them here. Keep them in sync
+# with nothing else — _config.yml no longer reads any of them.
+cv_pdf: /assets/pdf/himanshu_singh_cv.pdf # path to your CV PDF file
+email: himanshus@iiitd.ac.in # your email address
+scholar_userid: kWVGG-gAAAAJ # your Google Scholar ID
+orcid_id: 0009-0000-8946-3674 # your ORCID ID
+github_username: himanshuIndia # your GitHub user name
+linkedin_username: singh-himanshu # your LinkedIn user name
+dblp_url: https://dblp.org/pid/81/3758-5.html # your DBLP profile url
+# rss_icon: true # commented out to hide the RSS icon (site has no published posts yet)

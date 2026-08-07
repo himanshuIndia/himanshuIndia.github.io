@@ -13,10 +13,19 @@ profile:
     <p>IIIT Delhi</p>
     <p>Okhla Phase 3, Delhi 110020</p>
 
-news: false  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+
+# as of al-folio v0.16 these moved out of _config.yml into page front matter
+announcements:
+  enabled: false # includes a list of news items
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: false
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
 ---
 
 I am a Ph.D. candidate in Machine Learning at [IIIT Delhi](https://www.iiitd.ac.in/) where I am part of the [Visual Conception Group](https://vcg.iiitd.edu.in/) under the supervision of [Dr. AV Subramanyam](https://www.iiitd.ac.in/subramanyam). My research focuses on robustness, security, and alignment of modern machine learning systems. I study the vulnerabilities of deep neural networks to adversarial attacks and design principled defenses grounded in representation learning, geometry, and optimization.
