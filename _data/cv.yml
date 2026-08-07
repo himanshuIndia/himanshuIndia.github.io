@@ -1,92 +1,179 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Himanshu Singh
-    # - name: Date of Birth
-    #   value: 20th March 1996
-    - name: Languages
-      value: English, Hindi
+# RenderCV-format CV data.
+#
+# al-folio v1 renders /cv/ from `site.data.cv.cv` (RenderCV) or
+# `site.data.resume` (JSONResume). The pre-v1 format — a top-level list of
+# {title, type, contents} sections — is no longer read at all and renders
+# "No CV data found", so this file was converted.
+#
+# Section keys below are matched by name in al_folio_cv's render template:
+# Experience, Education, Awards, Publications, Skills, Languages, Certificates,
+# Projects, Interests, References get purpose-built templates. Any other
+# section name falls back to a generic renderer that understands `bullet`
+# or `label`/`details` entries — that is how Patents and Academic Service work.
+#
+# Dates are quoted so YAML keeps them as strings. Omitting `end_date` renders
+# as "Present".
+#
+# Source of truth: assets/pdf/himanshu_singh_cv.pdf
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: IIIT Delhi, India
-      year: Ongoing
-      description:
-        - Focused on Machine Learning, specifically adversarial attacks.
-        - Advised by Dr. AV Subramanyam.
-    - title: Bachelor of Technology in Computer Science and Engineering
-      institution: GGSIP University Delhi, India
-      year: 2017
+cv:
+  name: Himanshu Singh
+  label: PhD Candidate in Machine Learning, IIIT Delhi
+  email: himanshus@iiitd.ac.in
+  website: https://www.himanshu.phd/
+  summary: >-
+    PhD candidate working on the robustness, security, and alignment of modern
+    machine learning systems — adversarial training, projection-based feature
+    regularization, diffusion-based purification, and alignment of foundation
+    models under adversarial prompting.
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Research Scientist
-      institution: Animaker Inc.
-      year: 2017 - 2020
+  sections:
+    Experience:
+      - company: Microsoft
+        position: Applied Sciences Intern
+        location: Bangalore, India
+        start_date: "2026-05"
 
+      - company: National University of Singapore
+        position: Visiting Scholar
+        location: Singapore
+        start_date: "2025-05"
+        end_date: "2025-10"
+        highlights:
+          - Worked on robustness and alignment of foundation models, focusing on
+            jailbreak simulation and adversarial prompt defense mechanisms.
 
-#       description:
-#         - Description 1.
-#         - Description 2.
-#         - title: Description 3.
-#           contents:
-#             - Sub-description 1.
-#             - Sub-description 2.
-#     - title: Visiting Professor
-#       institution: California Institute of Technology, Pasadena, California, US
-#       year: 1933
-#       description:
-#         - Description 1.
-#         - Description 2.
+      - company: Indraprastha Institute of Information Technology Delhi
+        position: Research Scholar
+        location: Delhi, India
+        start_date: "2020-08"
+        highlights:
+          - Defending deep learning models against adversarial attacks on image
+            classification using purification techniques with diffusion models.
+          - Developed the Language Guided Adversarial Purification method for
+            adversarial robustness (patent filed).
+          - Investigating adversarial robustness by combining foundation models
+            from computer vision and natural language for image classification.
 
-#     - title: Director
-#       institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-#       year: 1917-1933
+      - company: Indraprastha Institute of Information Technology Delhi
+        position: Teaching Assistant
+        location: Delhi, India
+        start_date: "2020-08"
+        end_date: "2024-05"
+        highlights:
+          - "Advances in Deep Learning (M'23) — Best TA Award"
+          - "Statistical Machine Learning (W'22, W'23, W'24, W'25)"
+          - "Digital Image Processing (M'21, M'22); Computer Vision (W'21);
+            Natural Language Processing (M'20)"
 
-#     - title: Professor of Theoretical Physics
-#       institution: Karl-Ferdinand University, Prague, Czechoslovakia
-#       year: 1911 - 1917
-#       description:
+      - company: Medway Technologies Pvt. Ltd.
+        position: Consultant
+        location: Remote
+        start_date: "2021-12"
+        end_date: "2022-12"
+        highlights:
+          - Developed an OCR pipeline to extract text from images of printed and
+            handwritten medical prescriptions.
+          - Matched extracted text against a database to identify prescribed
+            medicines and patient information.
 
-#     - title: Associate Professor of Theoretical Physics
-#       institution: University of Zurich, Zurich, Switzerland
-#       year: 1909 - 1911
+      - company: Animaker Inc.
+        position: Research Scientist (Machine Learning and Computer Vision)
+        location: Bangalore, India
+        start_date: "2017-07"
+        end_date: "2020-08"
+        highlights:
+          - Contributed to building the patented text-to-video platform Steve AI.
+          - Developed and deployed a machine learning pipeline for background
+            subtraction in images and videos.
+          - Designed algorithms to identify and rank relevant sections of long
+            videos using activity detection, facial recognition, attention, and
+            saliency analysis.
+          - Built a recommendation system for layout optimization, enabling
+            intelligent placement of characters and text in visual content.
+          - Developed colour recommendation models for scene components using
+            user-preferred hue templates and quantitative scoring of colour
+            combinations.
 
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    Education:
+      - institution: Indraprastha Institute of Information Technology Delhi
+        area: Computer Science
+        degree: PhD
+        location: Delhi, India
+        start_date: "2020-08"
+        highlights:
+          - "Advisor: Dr. A. V. Subramanyam"
+          - "CGPA: 8.24"
+          - "Coursework: Advanced Machine Learning, Deep Learning, Machine
+            Learning, Probability and Random Processes, Convex Optimization,
+            Reproducing Kernel Hilbert Spaces and Applications, Meta Learning,
+            Digital Image Processing"
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items: 
-#         - Nobel Prize in Physics 
-#         - Matteucci Medal
-#     - year: 2029
-#       items: 
-#         - Max Planck Medal
+      - institution: Guru Gobind Singh Indraprastha University
+        area: Computer Science and Engineering
+        degree: BTech
+        location: Delhi, India
+        start_date: "2013-08"
+        end_date: "2017-07"
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items: 
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
+    Patents:
+      - bullet: >-
+          A. V. Subramanyam, **H. Singh**. *A method and a system for defending a
+          deep learning model.* Indian Patent No. 592301 — granted 15 June 2026.
+      - bullet: >-
+          V. C. Bhagath, **H. Singh**. *System and Method for Language Learning.*
+          Indian Patent No. 567815 — granted 24 June 2025.
 
-# - title: Other Interests
-#   type: list
-#   contents:
-#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    Academic Service:
+      - bullet: Reviewer, IEEE MLSP 2025
+      - bullet: Reviewer, IEEE ICASSP 2025
+      - bullet: Volunteer, IEEE ICASSP 2024
+
+    Awards:
+      - title: Best TA Award — Advances in Deep Learning
+        awarder: IIIT Delhi
+      - title: Best Performance — research award for outstanding performance
+        awarder: Animaker Inc.
+      - title: 1st position, "Syntaxomania" coding event
+        awarder: IEEE group, Amitech 2015
+        date: "2015"
+      - title: Certificate of Merit for securing 10 CGPA
+        awarder: CBSE
+
+    Skills:
+      - name: Languages
+        keywords:
+          - Python
+          - C++
+          - SQL
+      - name: Libraries and Frameworks
+        keywords:
+          - PyTorch
+          - Hugging Face
+          - OpenCV
+          - NumPy
+          - Pandas
+          - scikit-learn
+          - MATLAB
+      - name: Databases
+        keywords:
+          - MongoDB
+          - MySQL
+
+    Certificates:
+      - name: Deep Learning Specialization
+        issuer: DeepLearning.AI (Coursera)
+      - name: Machine Learning
+        issuer: Stanford University (Coursera)
+      - name: "Machine Learning Foundations: A Case Study Approach"
+        issuer: University of Washington (Coursera)
+      - name: "Machine Learning: Regression"
+        issuer: University of Washington (Coursera)
+      - name: The Data Scientist's Toolbox
+        issuer: Johns Hopkins University (Coursera)
+
+    Languages:
+      - language: English
+        fluency: Professional working proficiency
+      - language: Hindi
+        fluency: Native
