@@ -78,12 +78,16 @@
           {% endfor %}
         {%- endif -%}
 
-        {% comment %} Equal-contribution marker: custom `equal_contribution` / `equal_contribution_count` bib fields {% endcomment %}
+        {% comment %}
+          Site override: equal-contribution marker, driven by the custom
+          `equal_contribution` / `equal_contribution_count` bib fields.
+          count==0/absent marks every author; otherwise the first N.
+        {% endcomment %}
         {%- assign ec_mark = '' -%}
         {%- if entry.equal_contribution -%}
           {%- assign ec_count = entry.equal_contribution_count | default: 0 | plus: 0 -%}
           {%- if ec_count == 0 or forloop.index <= ec_count -%}
-            {%- assign ec_mark = '<sup class="pub-footnote-mark">*</sup>' -%}
+            {%- assign ec_mark = '<sup class="align-super text-xs">*</sup>' -%}
           {%- endif -%}
         {%- endif -%}
 
@@ -106,7 +110,8 @@
             </a>{{- ec_mark -}}
           {%- else -%}
             {{- author.first }}
-            {{ author_last_html }}{{ ec_mark -}}
+            {{ author_last_html -}}
+            {{- ec_mark -}}
           {% endif %}
         {%- endif -%}
       {% endfor %}
@@ -130,12 +135,12 @@
           class="more-authors"
           title="click to view {{ more_authors_hide }}"
           onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
+              var element = this;
+              element.setAttribute('title', '');
+              var more_authors_text = element.textContent == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
               var cursorPosition = 0;
               var textAdder = setInterval(function(){
-                element.html(more_authors_text.substring(0, cursorPosition + 1));
+                element.innerHTML = more_authors_text.substring(0, cursorPosition + 1);
                 if (++cursorPosition == more_authors_text.length){
                   clearInterval(textAdder);
                 }
@@ -375,16 +380,15 @@
     {% endif %}
 
     {% if entry.equal_contribution or entry.preprint or entry.under_review %}
-      <!-- Footnotes (custom: `equal_contribution`, `preprint`, `under_review` bib fields) -->
-      <div class="pub-footnotes">
+      <div class="pub-footnotes mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs italic opacity-80">
         {% if entry.equal_contribution %}
-          <span class="pub-footnote"><sup>*</sup>Equal Contribution</span>
+          <span><sup>*</sup>Equal Contribution</span>
         {% endif %}
         {% if entry.preprint %}
-          <span class="pub-footnote"><i class="fas fa-file-alt"></i> Preprint</span>
+          <span><i class="fa-solid fa-file-lines" style="color:#e67e22"></i> Preprint</span>
         {% endif %}
         {% if entry.under_review %}
-          <span class="pub-footnote"><i class="fas fa-clock"></i> Under Review</span>
+          <span><i class="fa-solid fa-clock" style="color:#1abc9c"></i> Under Review</span>
         {% endif %}
       </div>
     {% endif %}
