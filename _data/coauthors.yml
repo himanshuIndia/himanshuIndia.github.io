@@ -1,16 +1,19 @@
-"Subramanyam":
+# NOTE: keys MUST be lowercase. al-folio >= v0.16 looks these up with
+# `site.data.coauthors[author_last_name | downcase]`, so a capitalised key
+# silently never matches and the co-author renders without a hyperlink.
+"subramanyam":
   - firstname: ["A V"]
     url: https://iiitd.ac.in/subramanyam
 
-"Kankanhalli":
+"kankanhalli":
   - firstname: ["Mohan"]
     url: https://www.comp.nus.edu.sg/~mohan/
 
-"Xu":
+"xu":
   - firstname: ["Ziwei"]
     url: https://home.ziwei-xu.com/
 
-"Rajput":
+"rajput":
   - firstname: ["Shivank"]
     url: https://www.linkedin.com/in/shivank-rajput-034b8226b
 

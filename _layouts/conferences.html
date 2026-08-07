@@ -2,6 +2,47 @@
 layout: default
 ---
 
+{%- comment -%}
+  These styles used to live in assets/css/main.scss. al-folio v1 is Tailwind-first
+  and ships its own gem-owned assets/css/main.css, so a site-level main.scss would
+  shadow the gem's stylesheet rather than extend it. They are scoped here instead —
+  this layout is the only consumer.
+{%- endcomment -%}
+<style>
+  #countdowns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  #countdowns .card {
+    flex: 1 1 100%;
+  }
+  .timers {
+    display: flex;
+    flex-direction: column;
+  }
+  .timer-wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .timer {
+    font-weight: 700;
+    color: var(--global-theme-color);
+  }
+  /* an elapsed deadline is stated, not shouted */
+  .timer.expired {
+    font-weight: 500;
+    color: var(--global-text-color-light);
+    font-variant: small-caps;
+  }
+  .actual-date {
+    color: var(--global-text-color-light);
+  }
+</style>
+
 <div class="post">
 
   <header class="post-header">
@@ -121,7 +162,10 @@ function updateCountdown(id, dateStr, offsetStr) {
     }
 
     const el = document.getElementById(id);
-    if (el) el.textContent = output;
+    if (el) {
+      el.textContent = output;
+      el.classList.toggle("expired", distance <= 0);
+    }
   } catch (err) {
     console.error("Countdown error:", id, err);
   }

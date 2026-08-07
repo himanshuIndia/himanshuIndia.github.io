@@ -2,7 +2,7 @@
 layout: page
 permalink: /schedule/
 title: schedule
-nav: true
+nav: false
 nav_order: 
 description: Book a time to talk about adversarial robustness, AI security, alignment, or potential collaborations.
 ---
