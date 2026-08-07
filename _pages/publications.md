@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description:
+description: Peer-reviewed publications and preprints on adversarial robustness, adversarial purification, and LLM safety.
 nav: true
 nav_order: 3
 ---

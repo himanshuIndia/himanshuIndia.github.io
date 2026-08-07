@@ -1,12 +1,14 @@
 ---
 layout: about
 title: about
+description: Himanshu Singh — PhD candidate at IIIT Delhi working on adversarial robustness, AI security, and alignment of machine learning systems.
 permalink: /
 subtitle: PhD Candidate | <a href='https://www.iiitd.ac.in/'>IIIT Delhi</a>
 
 profile:
   align: right
   image: prof_pic.jpg
+  image_alt: Portrait of Himanshu Singh
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>B611, R and D Block</p>
@@ -18,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 # as of al-folio v0.16 these moved out of _config.yml into page front matter
 announcements:
-  enabled: false # includes a list of news items
+  enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -32,7 +34,9 @@ I am a Ph.D. candidate in Machine Learning at [IIIT Delhi](https://www.iiitd.ac.
 
 My work spans adversarial training, projection-based feature regularization, diffusion-based purification methods, and systematic robustness evaluation under white-box and gray-box threat models. I am particularly interested in understanding how representation geometry influences adversarial vulnerability and generalization.
 
-I recently completed a Visiting Scholar position at the [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/), where I worked on foundational model alignment and LLM/VLM security, including neuron-level interventions, value steering, and probing alignment under adversarial prompts.
+I am currently an Applied Sciences Intern at [Microsoft](https://www.microsoft.com/en-in/msidc/) in Bangalore. Before that I was a Visiting Scholar at the [NUS Artificial Intelligence Institute](https://ai.nus.edu.sg/), where I worked on foundational model alignment and LLM/VLM security, including neuron-level interventions, value steering, and probing alignment under adversarial prompts.
+
+My work on adversarial defenses has resulted in two granted Indian patents, and my research has appeared in IEEE Transactions on Artificial Intelligence and at ICASSP.
 
 Prior to academia, I worked as a Research Scientist at [Animaker](https://www.animaker.com/), contributing to the development of the text-to-video system [Steve AI](https://www.steve.ai/). This experience strengthened my interest in building AI systems that bridge theoretical insight with real-world deployment.
 

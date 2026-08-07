@@ -27,9 +27,11 @@
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}" alt="{{ entry.preview_alt | default: entry.title | append: ' — paper preview' }}">
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% comment %} Site override: real alt text, not the image filename {% endcomment %}
+          {% capture preview_alt_text %}{{ entry.preview_alt | default: entry.title }} — paper preview{% endcapture %}
           {%
             include figure.liquid
             loading="eager"
@@ -38,7 +40,7 @@
             class="preview z-depth-1 rounded"
             zoomable=true
             avoid_scaling=true
-            alt=entry.preview
+            alt=preview_alt_text
           %}
         {% endif %}
       {% endif %}
