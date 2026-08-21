@@ -11,7 +11,7 @@ profile:
   image_alt: Portrait of Himanshu Singh
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>B611, R and D Block</p>
+    <p>B415, R&D Block</p>
     <p>IIIT Delhi</p>
     <p>Okhla Phase 3, Delhi 110020</p>
 
