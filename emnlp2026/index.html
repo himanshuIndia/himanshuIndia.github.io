@@ -1,0 +1,309 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> EMNLP 2026 paper | Himanshu Singh </title> <meta name="author" content="Himanshu Singh"> <meta name="description" content="Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention — Findings of EMNLP 2026."> <meta name="keywords" content="himanshu, himanshu-singh, singh-himanshu, phd, adversarial robustness, adversarial attacks, trustworthy ai, ai alignment, llm security, diffusion models, machine-learning, computer-vision, iiit-delhi, nus, research-scientist, academic-website, conference-deadlines"> <meta property="og:site_name" content="Himanshu Singh"> <meta property="og:type" content="website"> <meta property="og:title" content="Himanshu Singh | EMNLP 2026 paper"> <meta property="og:url" content="https://www.himanshu.phd/emnlp2026/"> <meta property="og:description" content="Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention — Findings of EMNLP 2026."> <meta property="og:image" content="https://www.himanshu.phd/assets/img/prof_pic.jpg"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="EMNLP 2026 paper"> <meta name="twitter:description" content="Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention — Findings of EMNLP 2026."> <meta name="twitter:image" content="https://www.himanshu.phd/assets/img/prof_pic.jpg"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Himanshu Singh"
+        },
+        "url": "https://www.himanshu.phd/emnlp2026/",
+        "@type": "WebSite",
+        "description": "Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention — Findings of EMNLP 2026.",
+        "headline": "EMNLP 2026 paper",
+        
+        "sameAs": [null,"https://scholar.google.com/citations?user=kWVGG-gAAAAJ","https://orcid.org/0009-0000-8946-3674","https://github.com/himanshuIndia","https://www.linkedin.com/in/singh-himanshu","https://dblp.org/pid/81/3758-5.html"],
+        
+        "name": "Himanshu Singh",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 800px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=b7e280e57e2bc547c94fb59c914ff711"> <link rel="canonical" href="https://www.himanshu.phd/emnlp2026/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Himanshu</span> Singh </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/deadlines/">deadlines </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style>
+  .paper-page {
+    padding-top: 1rem;
+  }
+  .paper-page .venue {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 0.25rem;
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .paper-page h2.paper-title {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+  .paper-page .authors {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .paper-page .authors a {
+    color: inherit;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .paper-page .affils {
+    margin: 0.25rem 0 0;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+  .paper-page .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+  }
+  .paper-page .actions a {
+    flex: 1 1 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--global-theme-color);
+    color: var(--global-theme-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .paper-page .actions a.primary {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+  }
+  .paper-page .actions a:hover {
+    background: var(--global-hover-color);
+    color: var(--global-hover-text-color);
+  }
+  .paper-page .warning {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    font-style: italic;
+  }
+  .paper-page .viewer {
+    width: 100%;
+    height: 85vh;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.4rem;
+  }
+  .paper-page pre.bibtex {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background: var(--global-code-bg-color);
+  }
+  @media (max-width: 768px) {
+    .paper-page .viewer-section {
+      display: none;
+    }
+  }
+</style> <div class="paper-page"> <span class="venue">Findings of EMNLP 2026 · Budapest</span> <h2 class="paper-title">Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention</h2> <p class="authors"> <a href="/">Himanshu Singh</a>, <a href="https://home.ziwei-xu.com/" rel="external nofollow noopener" target="_blank">Ziwei Xu</a>, <a href="https://iiitd.ac.in/subramanyam" rel="external nofollow noopener" target="_blank">A. V. Subramanyam</a>, <a href="https://www.comp.nus.edu.sg/~mohan/" rel="external nofollow noopener" target="_blank">Mohan Kankanhalli</a> </p> <p class="affils">IIIT Delhi · FAR.AI · National University of Singapore</p> <div class="actions"> <a class="primary" href="/assets/pdf/EMNLP2026_paper.pdf" target="_blank" rel="noopener">Read the full paper (PDF)</a> <a href="/assets/pdf/EMNLP2026_poster.pdf" target="_blank" rel="noopener">Poster</a> <a href="https://arxiv.org/abs/2602.06623" target="_blank" rel="noopener">arXiv</a> <a href="#bibtex">Cite</a> </div> <h3>Abstract</h3> <p> Large Language Models (LLMs) are powerful text generators, yet they can produce toxic or harmful content even when given seemingly harmless prompts. This presents a serious safety challenge and can cause real-world harm. Toxicity is often subtle and context-dependent, making it difficult to detect at the token level or through coarse sentence-level signals. Moreover, efforts to mitigate toxicity often face a trade-off between safety and the coherence, or fluency, of the generated text. In this work, we present a targeted subspace intervention strategy based on gradient signals for identifying and suppressing hidden toxic patterns from underlying model representations, while preserving the overall ability to generate safe, fluent content. On the RealToxicityPrompts dataset, our method achieves strong mitigation performance compared to existing baselines while imposing minimal impact on inference complexity. Across LLMs, our approach reduces the toxicity of state-of-the-art detoxification systems by 8–20%, while maintaining comparable fluency. We further validate cross-benchmark generality on ToxiGen, where the same gains hold under adversarial, implicitly toxic prompts. Through extensive quantitative and qualitative analyses, we show that our approach achieves effective toxicity reduction without impairing generative performance, consistently outperforming existing baselines. </p> <p class="warning">Content warning: the paper contains examples of toxic and offensive language. Toxic words are partially masked with *.</p> <div class="viewer-section"> <h3>Paper</h3> <iframe class="viewer" src="/assets/pdf/EMNLP2026_paper.pdf#view=FitH" title="EMNLP 2026 paper PDF" loading="lazy"></iframe> </div> <h3 id="bibtex">Citation</h3> <pre class="bibtex">@inproceedings{singh2026promptsguaranteesafetymitigating,
+  title     = {Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace Intervention},
+  author    = {Singh, Himanshu and Xu, Ziwei and Subramanyam, A. V. and Kankanhalli, Mohan},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  address   = {Budapest, Hungary},
+  month     = {October},
+  year      = {2026},
+  eprint    = {2602.06623},
+  archivePrefix = {arXiv}
+}</pre> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Himanshu Singh. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFDT3Q3C3K"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-QFDT3Q3C3K");
+</script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-cv",
+          title: "cv",
+          description: "Machine learning research — adversarial robustness, AI security, and alignment.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "A summary of my teaching experience.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Peer-reviewed publications and preprints on adversarial robustness, adversarial purification, and LLM safety.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-deadlines",
+          title: "deadlines",
+          description: "Countdown timers for upcoming machine learning and computer vision conference deadlines.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/deadlines/";
+          },
+        },{id: "news-indian-patent-no-567815-system-and-method-for-language-learning-granted",
+          title: 'Indian Patent No. 567815, System and Method for Language Learning, granted.',
+          description: "",
+          section: "News",},{id: "news-completed-a-visiting-scholar-position-at-the-nus-ai-institute-working-on-robustness-and-alignment-of-foundation-models",
+          title: 'Completed a Visiting Scholar position at the NUS AI Institute, working on robustness...',
+          description: "",
+          section: "News",},{id: "news-nearest-neighbor-projection-removal-adversarial-training-accepted-at-ieee-transactions-on-artificial-intelligence-paper-code",
+          title: 'Nearest Neighbor Projection Removal Adversarial Training accepted at IEEE Transactions on Artificial Intelligence....',
+          description: "",
+          section: "News",},{id: "news-started-as-an-applied-sciences-intern-at-microsoft-bangalore",
+          title: 'Started as an Applied Sciences Intern at Microsoft, Bangalore.',
+          description: "",
+          section: "News",},{id: "news-indian-patent-no-592301-a-method-and-a-system-for-defending-a-deep-learning-model-granted",
+          title: 'Indian Patent No. 592301, A method and a system for defending a deep...',
+          description: "",
+          section: "News",},{id: "news-do-prompts-guarantee-safety-mitigating-toxicity-from-llm-generations-through-gradient-based-subspace-intervention-accepted-in-empirical-methods-in-natural-language-processing-emnlp-2026",
+          title: 'Do Prompts Guarantee Safety? Mitigating Toxicity from LLM Generations through Gradient Based Subspace...',
+          description: "",
+          section: "News",},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/himanshu_singh_cv.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%68%69%6D%61%6E%73%68%75%73@%69%69%69%74%64.%61%63.%69%6E", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=kWVGG-gAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0000-8946-3674", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/himanshuIndia", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/singh-himanshu", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/81/3758-5.html", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
