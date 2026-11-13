@@ -1,3 +1,14 @@
+@misc{himanshu2026probeguided,
+      bibtex_show={true},
+      title={Probe-Guided Error Detection and Correction in Language Models}, 
+      author={Singh, Himanshu and Xu, Ziwei and Subramanyam, A V and Kankanhalli, Mohan},
+      year={2026},
+      selected={false},
+      preview       = {probeguided.jpg},
+      booktitle={Under review},
+      under_review={true},
+      }
+
 @misc{himanshu2026mitigating,
       bibtex_show={true},
       title={Mitigating Distribution Shift for Adversarial Purification}, 
@@ -9,17 +20,21 @@
       under_review={true},
       }
 
-@misc{shivank2026,
+@inproceedings{shivank2027salsa,
       bibtex_show={true},
-      title={Learning Adversarial Manifold for Jailbreaking at Scale}, 
+      title={SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment}, 
       author={Rajput, Shivank and Singh, Himanshu and Subramanyam, A V},
-      year={2026},
-      selected={false},
-      preview       = {jailbreak.jpg},
-      booktitle={Under review},
-      under_review={true},
       equal_contribution={true},
       equal_contribution_count={2},
+      booktitle     = {Findings of the Association for Computational Linguistics: EACL 2027},
+      abbr          = {EACL},
+      address       = {Athens, Greece},
+      month         = {March},
+      year={2027},
+      preview       = {jailbreak.jpg},
+      altmetric={true},
+      abstract={Large language models (LLMs) remain vulnerable to jailbreak attacks, where adversaries append optimized suffixes to otherwise benign looking prompts to bypass safety alignment. Existing optimization-based GCG-style attacks can be effective, but they are expensive at inference time, and suffer from poor transfer. We present, SALSA, a generative framework that learns a distribution over jailbreak suffixes from optimization-derived attack corpora. Once trained, the model supports efficient sampling-based attacks. On open-source targets, it achieves attack success rates comparable to state-of-the-art optimization baselines, while reducing generation time from 3.46s to 0.04s per prompt. In black-box transfer, it remains highly effective against proprietary systems, including 99% ASR on GPT-3.5-Turbo, and reaches 45% ASR on the substantially harder GPT-4o, more than doubling the strongest baseline at an equal sampling budget. We further provide a theoretical motivation for why generative sampling can preserve high attack success, when the learned suffix distribution is close to the distribution of optimization outputs. Overall, our results show that learning adversarial suffix distributions yields a scalable, and practically efficient foundation for continuous LLM vulnerability discovery.},
+      selected      = {true}
       }
 
 @inproceedings{singh2026promptsguaranteesafetymitigating,
@@ -39,7 +54,8 @@
       preview       = {toxicity.jpg},
       arxiv={2602.06623},
       altmetric={true},
-      abstract={Large Language Models (LLMs) are powerful text generators, yet they can produce toxic or harmful content even when given seemingly harmless prompts. This presents a serious safety challenge and can cause real-world harm. Toxicity is often subtle and context-dependent, making it difficult to detect at the token level or through coarse sentence-level signals. Moreover, efforts to mitigate toxicity often face a trade-off between safety and the coherence, or fluency, of the generated text. In this work, we present a targeted subspace intervention strategy based on gradient signals for identifying and suppressing hidden toxic patterns from underlying model representations, while preserving the overall ability to generate safe, fluent content. On the RealToxicityPrompts dataset, our method achieves strong mitigation performance compared to existing baselines while imposing minimal impact on inference complexity. Across LLMs, our approach reduces the toxicity of state-of-the-art detoxification systems by 8-20%, while maintaining comparable fluency. We further validate cross-benchmark generality on ToxiGen, where the same gains hold under adversarial, implicitly toxic prompts. Through extensive quantitative and qualitative analyses, we show that our approach achieves effective toxicity reduction without impairing generative performance, consistently outperforming existing baselines.}
+      abstract={Large Language Models (LLMs) are powerful text generators, yet they can produce toxic or harmful content even when given seemingly harmless prompts. This presents a serious safety challenge and can cause real-world harm. Toxicity is often subtle and context-dependent, making it difficult to detect at the token level or through coarse sentence-level signals. Moreover, efforts to mitigate toxicity often face a trade-off between safety and the coherence, or fluency, of the generated text. In this work, we present a targeted subspace intervention strategy based on gradient signals for identifying and suppressing hidden toxic patterns from underlying model representations, while preserving the overall ability to generate safe, fluent content. On the RealToxicityPrompts dataset, our method achieves strong mitigation performance compared to existing baselines while imposing minimal impact on inference complexity. Across LLMs, our approach reduces the toxicity of state-of-the-art detoxification systems by 8-20%, while maintaining comparable fluency. We further validate cross-benchmark generality on ToxiGen, where the same gains hold under adversarial, implicitly toxic prompts. Through extensive quantitative and qualitative analyses, we show that our approach achieves effective toxicity reduction without impairing generative performance, consistently outperforming existing baselines.},
+      selected      = {true}
       }
 
 @article{singh2026nearestneighborprojectionremoval,
