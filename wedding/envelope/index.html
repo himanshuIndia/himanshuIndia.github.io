@@ -1,0 +1,232 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> <meta name="robots" content="noindex, nofollow"> <meta name="color-scheme" content="light"> <meta name="theme-color" content="#f6e6e1"> <title>Himanshu &amp; Megha · Wedding</title> <meta name="description" content="Together with their families, we joyfully invite you to celebrate our wedding."> <meta property="og:type" content="website"> <meta property="og:title" content="Himanshu &amp; Megha · Friday, 12 February 2027"> <meta property="og:description" content="Together with their families, we joyfully invite you to celebrate our wedding."> <meta property="og:url" content="https://www.himanshu.phd/wedding/envelope/"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&amp;family=Jost:wght@300;400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;display=swap" rel="stylesheet"> <style>
+      /* Layout: a sealed envelope is the whole first screen; once opened, an ivory page with a giant translucent monogram behind the date and the details. */
+      :root {
+        --blush: #f1d6cf;
+        --blush-deep: #e4bcb2;
+        --blush-shade: #d9a99d;
+        --seal: #8b1a2b;
+        --seal-hi: #b6383f;
+        --ivory: #fffaf4;
+        --gold: #b08a54;
+        --ink: #3b2a27;
+        --muted: #8c706a;
+        --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+        --body: "Jost", "Futura", "Avenir Next", system-ui, sans-serif;
+        color-scheme: light;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      /* Bodoni Moda picks very thin hairlines at large sizes; pin a sturdier optical size. */
+      .names, .l-names, .seal, .mono-bg, h2, .event h3, .deadline, .hashtag, .l-date { font-optical-sizing: none; font-variation-settings: "opsz" 18; }
+      body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--body); font-weight: 400; font-size: 1.06rem; line-height: 1.6; }
+      .gutter {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+      }
+      a:focus-visible, button:focus-visible { outline: 2px solid var(--seal); outline-offset: 4px; }
+
+      /* envelope */
+      .opening {
+        background: radial-gradient(ellipse at 50% 40%, #fbeee9 0%, #f3ddd6 70%);
+        padding-block: calc(env(safe-area-inset-top) + 40px) 56px;
+        display: grid;
+        justify-items: center;
+        gap: 22px;
+        overflow: hidden;
+      }
+      .envelope {
+        position: relative;
+        width: min(380px, 100%);
+        aspect-ratio: 3 / 2;
+        padding: 0;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        perspective: 900px;
+        font: inherit;
+        color: inherit;
+      }
+      .envelope > span { position: absolute; inset: 0; display: block; }
+      .env-back { background: var(--blush-deep); border-radius: 6px; box-shadow: 0 24px 50px -24px rgb(90 30 30 / 0.45); }
+      .letter {
+        inset: 8px 14px auto 14px !important;
+        height: calc(100% - 16px);
+        background: var(--ivory);
+        border-radius: 3px;
+        box-shadow: 0 2px 10px rgb(0 0 0 / 0.08);
+        display: grid !important;
+        align-content: center;
+        justify-items: center;
+        gap: 4px;
+        padding: 16px;
+        text-align: center;
+        transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.45s;
+      }
+      .letter::before { content: ""; position: absolute; inset: 7px; border: 1px solid var(--gold); pointer-events: none; }
+      .l-kicker { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); }
+      .l-names { font-family: var(--display); font-style: italic; font-size: 1.7rem; line-height: 1.1; }
+      .l-date { font-family: var(--display); font-size: 1rem; letter-spacing: 0.12em; color: var(--seal); }
+      .pocket {
+        background: linear-gradient(170deg, var(--blush) 0%, var(--blush-deep) 100%);
+        clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+        border-radius: 6px;
+      }
+      .pocket::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(35deg, transparent 49.6%, rgb(150 80 70 / 0.18) 50%, transparent 50.6%), linear-gradient(-35deg, transparent 49.6%, rgb(150 80 70 / 0.18) 50%, transparent 50.6%);
+      }
+      .flap {
+        height: 60%;
+        bottom: auto !important;
+        background: linear-gradient(180deg, var(--blush) 0%, var(--blush-shade) 100%);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        transform-origin: 50% 0;
+        transition: transform 0.6s ease-in, z-index 0s linear 0.3s;
+        z-index: 4;
+      }
+      .seal {
+        inset: auto !important;
+        left: 50% !important;
+        top: 60% !important;
+        width: 68px;
+        height: 68px;
+        margin: -34px 0 0 -34px;
+        border-radius: 48% 52% 46% 54% / 52% 47% 53% 48%;
+        background: radial-gradient(circle at 38% 32%, var(--seal-hi), var(--seal) 62%, #6a1220);
+        box-shadow: 0 3px 6px rgb(70 10 20 / 0.35), inset 0 0 0 5px rgb(0 0 0 / 0.08), inset 0 0 0 7px rgb(255 255 255 / 0.08);
+        color: #f6d9cf;
+        display: grid !important;
+        place-items: center;
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.35rem;
+        z-index: 5;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .env-back { z-index: 1; }
+      .letter { z-index: 2; }
+      .pocket { z-index: 3; }
+
+      .envelope.open .seal { opacity: 0; transform: scale(0.6); }
+      .envelope.open .flap { transform: rotateX(180deg); z-index: 1; }
+      .envelope.open .letter { transform: translateY(-58%); }
+      .envelope:not(.open):hover .seal { transform: scale(1.05); }
+
+      /* Ganesh ji and the shloka at the top (from _data/wedding.yml) */
+      .invocation { display: grid; justify-items: center; gap: 10px; text-align: center; }
+      .ganesh { display: block; width: 76px; height: 91px; color: var(--seal); }
+      .shloka { margin: 0; font-family: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif; font-size: 1.05rem; line-height: 1.75; color: var(--muted); text-wrap: balance; }
+      .opening .envelope { margin-top: 128px; }
+      .hint { margin: 0; font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); }
+
+      /* page */
+      .lead { position: relative; text-align: center; padding-block: 72px 32px; display: grid; justify-items: center; gap: 18px; overflow: hidden; }
+      .mono-bg {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-family: var(--display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(8rem, 34vw, 28rem);
+        line-height: 0.8;
+        color: var(--blush);
+        opacity: 0.55;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+      }
+      .lead > *:not(.mono-bg) { position: relative; }
+      .blessing { margin: 0; font-size: 1.3rem; color: var(--seal); }
+      .invite { margin: 0; max-width: 34ch; font-weight: 300; font-size: 1.15rem; }
+      .names {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: clamp(2.8rem, 10vw, 5rem);
+        line-height: 1;
+        letter-spacing: -0.01em;
+        text-wrap: balance;
+      }
+      .names em { font-weight: 400; color: var(--gold); }
+      .families { margin: 0; font-size: 0.92rem; color: var(--muted); max-width: 40ch; }
+      .date-line { margin: 6px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; font-size: 0.82rem; letter-spacing: 0.26em; text-transform: uppercase; }
+      .date-line span + span::before { content: "·"; margin-right: 18px; color: var(--gold); }
+      .message { margin: 0; max-width: 38ch; color: var(--muted); font-style: italic; }
+      .btn {
+        display: inline-block;
+        padding: 12px 34px;
+        background: var(--seal);
+        color: var(--ivory);
+        font-size: 0.82rem;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 999px;
+      }
+      .btn:hover { background: var(--seal-hi); }
+
+      main { max-width: 980px; margin: 0 auto; padding-block: 32px 64px; display: grid; gap: 64px; }
+      h2 {
+        margin: 0 0 26px;
+        text-align: center;
+        font-family: var(--display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 2.1rem;
+        line-height: 1.2;
+      }
+      h2::after { content: ""; display: block; width: 46px; height: 1px; margin: 14px auto 0; background: var(--gold); }
+      .events { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 0; border-block: 1px solid var(--blush-deep); }
+      .event { padding: 28px 24px; text-align: center; display: grid; gap: 4px; align-content: start; min-width: 0; }
+      .event + .event { border-left: 1px solid var(--blush-deep); }
+      .event h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 500; font-size: 1.75rem; line-height: 1.1; }
+      .event .when { margin: 0; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--seal); }
+      .event .venue { margin: 10px 0 0; }
+      .event .addr { margin: 0; font-size: 0.93rem; color: var(--muted); }
+      .event .dress { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); font-style: italic; }
+      .event .map { justify-self: center; margin-top: 10px; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+      .twin { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 48px; }
+      .twin section { min-width: 0; }
+      dl.travel { margin: 0; display: grid; gap: 16px; }
+      dl.travel dt { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+      dl.travel dd { margin: 0; }
+      .rsvp { text-align: center; display: grid; gap: 12px; justify-items: center; }
+      .deadline { margin: 0; font-family: var(--display); font-size: 1.6rem; line-height: 1.2; }
+      .note { margin: 0; max-width: 38ch; color: var(--muted); }
+      .contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 36px; margin-top: 10px; }
+      .contact { display: grid; }
+      .contact .rel { font-size: 0.88rem; color: var(--muted); }
+      .contact .tel { color: var(--seal); text-decoration: none; font-variant-numeric: tabular-nums; }
+
+      footer { text-align: center; padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+      .hashtag { margin: 0; font-family: var(--display); font-style: italic; font-size: 1.5rem; color: var(--gold); }
+
+      @media (max-width: 560px) {
+        .event + .event { border-left: 0; border-top: 1px solid var(--blush-deep); }
+        .opening { padding-block: calc(env(safe-area-inset-top) + 32px) 44px; }
+        .l-names { font-size: 1.4rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .letter, .flap, .seal { transition: none; }
+      }
+    </style> </head> <body> <div class="opening gutter"> <div class="invocation"> <svg class="ganesh" viewbox="4 0 112 134" role="img" aria-label="Shri Ganesh" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"> <path d="M43 46 C42 34 48 25 54 19 C57 16 59 12 60 7 C61 12 63 16 66 19 C72 25 78 34 77 46"></path> <path d="M40 46 H80" stroke-width="3.2"></path> <path d="M44 39 H76"></path> <g fill="currentColor" stroke="none"><circle cx="60" cy="4.5" r="2.3"></circle><circle cx="60" cy="27" r="2.6"></circle><circle cx="51" cy="33" r="1.6"></circle><circle cx="69" cy="33" r="1.6"></circle></g> <path d="M43 50 C30 42 11 46 9 64 C7 81 22 93 38 89 C42 88 44 85 45 81"></path> <path d="M77 50 C90 42 109 46 111 64 C113 81 98 93 82 89 C78 88 76 85 75 81"></path> <path d="M41 55 C30 49 16 54 15 66 C14 77 24 84 35 82" stroke-width="1.6"></path> <path d="M79 55 C90 49 104 54 105 66 C106 77 96 84 85 82" stroke-width="1.6"></path> <path d="M43 50 C43 54 43 56 44 60"></path><path d="M77 50 C77 54 77 56 76 60"></path> <path d="M56 49 C56 55 64 55 64 49"></path><path d="M60 50 V57" stroke-width="2.8"></path> <path d="M46 62 Q51 66.5 56 62" stroke-width="2.6"></path><path d="M47 59.5 Q51 58 55 59.5" stroke-width="1.4"></path> <path d="M64 62 Q69 66.5 74 62" stroke-width="2.6"></path><path d="M65 59.5 Q69 58 73 59.5" stroke-width="1.4"></path> <path d="M44 60 C44 70 46 78 52 82"></path><path d="M76 60 C76 70 74 78 68 82"></path> <path d="M53 70 C53 86 53 100 57 112 C61 124 71 131 80 127 C88 123 87 112 80 111 C75 111 74 117 78 119"></path> <path d="M67 70 C67 86 66 99 68 107 C70 114 75 116 79 114"></path> <g stroke-width="1.6"><path d="M54 82 Q60 84.5 66 82"></path><path d="M54 90 Q60 92.5 66 90"></path><path d="M54.5 98 Q60.5 100.5 66.5 98"></path></g> <path d="M70 80 C75 83 78 89 76 95" stroke-width="2.8"></path> </svg> <p class="shloka" lang="sa">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p> </div> <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-label="Open the invitation"> <span class="env-back"></span> <span class="letter" aria-hidden="true"> <span class="l-kicker">You're invited</span> <span class="l-names">Himanshu &amp; Megha</span> <span class="l-date">12 · 02 · 2027</span> </span> <span class="pocket"></span> <span class="flap"></span> <span class="seal" aria-hidden="true">HM</span> </button> <p class="hint" id="hint">Tap the seal to open</p> </div> <header class="lead gutter" id="invite"> <div class="mono-bg" aria-hidden="true">H&amp;M</div> <p class="blessing" lang="hi">शुभ विवाह</p> <p class="invite">Together with their families, we joyfully invite you to celebrate our wedding.</p> <h1 class="names">Himanshu <em>&amp;</em> Megha</h1> <p class="families">[Son of Mr. &amp; Mrs. ___] · [Daughter of Mr. &amp; Mrs. ___]</p> <p class="date-line"><span>Friday, 12 February 2027</span><span>New Delhi</span></p> <p class="message">[A line or two in your own words: how you met, or what having everyone there means to you.]</p> <a class="btn" href="#contacts">RSVP</a> </header> <main class="gutter"> <section aria-labelledby="h-events"> <h2 id="h-events">The celebrations</h2> <div class="events"> <article class="event"> <h3>Haldi</h3> <p class="when">Thursday, 11 Feb</p> <p class="when">Morning, from [10:00 AM]</p> <p class="venue">[Venue name]</p> <p class="addr">[Street, area, city]</p> <p class="dress">Dress: [Yellow, and clothes you don't mind getting stained]</p> <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%5BVenue+name%5D%2C+%5BStreet%2C+area%2C+city%5D" target="_blank" rel="noopener">Map</a> </article> <article class="event"> <h3>Mehendi</h3> <p class="when">Thursday, 11 Feb</p> <p class="when">Evening, from [6:00 PM]</p> <p class="venue">[Venue name]</p> <p class="addr">[Street, area, city]</p> <p class="dress">Dress: [Greens and pastels]</p> <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%5BVenue+name%5D%2C+%5BStreet%2C+area%2C+city%5D" target="_blank" rel="noopener">Map</a> </article> <article class="event"> <h3>Wedding</h3> <p class="when">Friday, 12 Feb</p> <p class="when">Evening, from [7:00 PM]</p> <p class="venue">Shiven Farms</p> <p class="addr">Najafgarh–Kapashera Road, Najafgarh, New Delhi 110043</p> <p class="dress">Dress: [Traditional]</p> <a class="map" href="https://maps.app.goo.gl/fERWkt4SJfRVc9k1A" target="_blank" rel="noopener">Map</a> </article> </div> </section> <div class="twin"> <section aria-labelledby="h-travel"> <h2 id="h-travel">Getting there</h2> <dl class="travel"> <div> <dt>Nearest airport</dt> <dd>Indira Gandhi International Airport (DEL), [about __ km / __ min from Shiven Farms]</dd> </div> <div> <dt>Nearest railway station</dt> <dd>[Station name, about __ km]</dd> </div> <div> <dt>Stay</dt> <dd>[Rooms are blocked at Hotel ___ for out-of-town guests. Mention our names when booking.]</dd> </div> <div> <dt>Getting around</dt> <dd>[Shuttles will run between the hotel and the venues.]</dd> </div> </dl> </section> <section aria-labelledby="h-rsvp" id="rsvp"> <h2 id="h-rsvp">Kindly reply</h2> <div class="rsvp"> <p class="deadline">[RSVP by 15 January 2027]</p> <p class="note">[Please let us know how many of you are coming, and which functions you'll attend.]</p> <div class="contacts" id="contacts"> <div class="contact"> <span>[Name]</span> <span class="rel">[Brother of the groom]</span> <span class="tel">[+91 98xxx xxxxx]</span> </div> <div class="contact"> <span>[Name]</span> <span class="rel">[Sister of the bride]</span> <span class="tel">[+91 98xxx xxxxx]</span> </div> </div> </div> </section> </div> </main> <footer class="gutter"><p class="hashtag">#[YourHashtag]</p></footer> <script>
+      (function () {
+        var env = document.getElementById("envelope");
+        var hint = document.getElementById("hint");
+        env.addEventListener("click", function () {
+          if (env.classList.contains("open")) {
+            document.getElementById("invite").scrollIntoView({ behavior: "smooth" });
+            return;
+          }
+          env.classList.add("open");
+          env.setAttribute("aria-expanded", "true");
+          env.setAttribute("aria-label", "Invitation opened. Go to the details");
+          hint.textContent = "Scroll down for the details";
+        });
+      })();
+    </script> </body> </html>

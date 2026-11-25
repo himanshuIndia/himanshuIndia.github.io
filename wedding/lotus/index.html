@@ -1,0 +1,137 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> <meta name="robots" content="noindex, nofollow"> <meta name="color-scheme" content="dark"> <meta name="theme-color" content="#0d3433"> <title>Himanshu &amp; Megha · Wedding</title> <meta name="description" content="Together with their families, we joyfully invite you to celebrate our wedding."> <meta property="og:type" content="website"> <meta property="og:title" content="Himanshu &amp; Megha · Friday, 12 February 2027"> <meta property="og:description" content="Together with their families, we joyfully invite you to celebrate our wedding."> <meta property="og:url" content="https://www.himanshu.phd/wedding/lotus/"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&amp;family=Tiro+Devanagari+Hindi:ital@0;1&amp;family=Tiro+Devanagari+Sanskrit&amp;display=swap" rel="stylesheet"> <style>
+      /* Layout: a Pichwai painting. A dense green ground scattered with buds, lotus-bud border bands, a pond along the hero's foot, cream panels framed in gold. */
+      :root {
+        --pond: #0d3433;
+        --pond-hi: #154846;
+        --lotus: #f4a7b6;
+        --lotus-deep: #d8607c;
+        --leaf: #4c9a5f;
+        --gold: #e3b95f;
+        --cream: #fbf0dc;
+        --ink: #2a211c;
+        --ink-soft: #6b5a4c;
+        --display: "Tiro Devanagari Hindi", "Iowan Old Style", Georgia, serif;
+        --body: "Hind", "Segoe UI", system-ui, sans-serif;
+        color-scheme: dark;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        color: var(--cream);
+        font-family: var(--body);
+        font-size: 1.08rem;
+        line-height: 1.6;
+        background:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%23e3b95f' opacity='.16'%3E%3Cpath d='M14 6c4 5 4 11 0 16-4-5-4-11 0-16z'/%3E%3Ccircle cx='42' cy='42' r='1.6'/%3E%3Cpath d='M42 34c2 2 2 4 0 6-2-2-2-4 0-6z'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 56px 56px,
+          var(--pond);
+      }
+      .gutter {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+      }
+      .band {
+        height: 30px;
+        border-block: 2px solid var(--gold);
+        background:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='26' viewBox='0 0 34 26'%3E%3Cpath d='M17 3c5 6 5 13 0 19-5-6-5-13 0-19z' fill='%23f4a7b6'/%3E%3Cpath d='M17 22c-3-3-8-4-12-3 3 3 8 4 12 3zM17 22c3-3 8-4 12-3-3 3-8 4-12 3z' fill='%234c9a5f'/%3E%3C/svg%3E") center / 34px 26px repeat-x,
+          #0a2928;
+      }
+
+      .hero { position: relative; padding-top: env(safe-area-inset-top); }
+      .hero-inner { display: grid; justify-items: center; text-align: center; gap: 16px; padding-block: 48px 0; max-width: 640px; margin: 0 auto; }
+      /* Ganesh ji and the shloka at the top (from _data/wedding.yml) */
+      .invocation { display: grid; justify-items: center; gap: 10px; text-align: center; }
+      .ganesh { display: block; width: 76px; height: 91px; color: var(--gold); }
+      .shloka { margin: 0; font-family: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif; font-size: 1.05rem; line-height: 1.75; color: rgb(251 240 220 / 0.85); text-wrap: balance; }
+      .blessing { margin: 0; font-family: var(--display); color: var(--gold); font-size: 1.7rem; line-height: 1.2; }
+      .invite { margin: 0; max-width: 32ch; color: rgb(251 240 220 / 0.8); }
+      .cartouche {
+        position: relative;
+        width: min(460px, 100%);
+        background: var(--cream);
+        color: var(--ink);
+        border-radius: 999px / 120px;
+        padding: 34px 28px 30px;
+        box-shadow: 0 0 0 3px var(--pond), 0 0 0 5px var(--gold);
+        display: grid;
+        gap: 6px;
+      }
+      .names {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: clamp(2.4rem, 9vw, 3.6rem);
+        line-height: 1.05;
+        color: var(--pond);
+        text-wrap: balance;
+      }
+      .names .amp { font-style: italic; color: var(--lotus-deep); }
+      .families { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+      .date { margin: 8px 0 0; font-family: var(--display); color: var(--gold); font-size: clamp(1.35rem, 5vw, 1.7rem); line-height: 1.2; }
+      .city { margin: 0; font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(251 240 220 / 0.75); }
+      .message { margin: 0; max-width: 36ch; font-style: italic; color: rgb(251 240 220 / 0.8); }
+      .btn {
+        display: inline-block;
+        padding: 11px 30px;
+        border-radius: 999px;
+        background: var(--lotus);
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+      }
+      .btn:hover { background: var(--cream); }
+      a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      .pond { display: block; width: 100%; height: 120px; margin-top: 18px; }
+
+      main { display: grid; gap: 60px; padding-block: 52px 60px; max-width: 1040px; margin: 0 auto; }
+      h2 {
+        margin: 0 0 24px;
+        text-align: center;
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.2;
+        color: var(--gold);
+      }
+      h2 svg { display: block; margin: 0 auto 6px; width: 46px; height: 32px; }
+
+      .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+      .panel {
+        background: var(--cream);
+        color: var(--ink);
+        border-radius: 6px;
+        padding: 26px 22px 22px;
+        box-shadow: inset 0 0 0 4px var(--cream), inset 0 0 0 5px var(--gold), inset 0 0 0 8px var(--cream), inset 0 0 0 9px var(--lotus-deep);
+        display: grid;
+        gap: 6px;
+        align-content: start;
+        text-align: center;
+        min-width: 0;
+      }
+      .panel h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 1.85rem; line-height: 1.1; color: var(--pond); }
+      .panel .when { margin: 0; font-weight: 600; color: var(--lotus-deep); }
+      .panel .venue { margin: 6px 0 0; font-weight: 500; }
+      .panel .addr { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+      .panel .dress { margin: 6px 0 0; font-size: 0.92rem; color: var(--ink-soft); }
+      .panel .dress b { color: var(--pond); font-weight: 600; }
+      .panel .map { justify-self: center; margin-top: 8px; color: var(--pond); font-weight: 600; font-size: 0.92rem; text-decoration: none; border-bottom: 2px solid var(--gold); }
+
+      .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 28px; align-items: start; }
+      .info section { min-width: 0; }
+      .info h2 { text-align: left; font-size: 1.7rem; margin-bottom: 14px; }
+      .info h2 svg { margin: 0 0 6px; }
+      dl.travel { margin: 0; display: grid; gap: 14px; }
+      dl.travel dt { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lotus); }
+      dl.travel dd { margin: 0; }
+      .deadline { margin: 0 0 6px; font-family: var(--display); font-size: 1.5rem; line-height: 1.25; color: var(--cream); }
+      .note { margin: 0 0 16px; color: rgb(251 240 220 / 0.8); }
+      .contacts { display: grid; gap: 12px; margin-top: 18px; }
+      .contact { display: grid; padding-left: 14px; border-left: 2px solid var(--gold); }
+      .contact .rel { font-size: 0.92rem; color: rgb(251 240 220 / 0.7); }
+      .contact .tel { color: var(--gold); text-decoration: none; font-variant-numeric: tabular-nums; }
+
+      footer { text-align: center; padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+      .hashtag { margin: 28px 0 0; font-family: var(--display); font-size: 1.5rem; color: var(--lotus); }
+    </style> </head> <body> <svg width="0" height="0" style="position: absolute" aria-hidden="true"> <defs> <symbol id="lotus" viewbox="0 0 100 70"> <path d="M50 64 C30 64 12 54 3 40 C22 37 40 47 50 64Z" fill="#d8607c"></path> <path d="M50 64 C70 64 88 54 97 40 C78 37 60 47 50 64Z" fill="#d8607c"></path> <path d="M50 62 C34 52 22 36 20 16 C36 21 47 38 50 62Z" fill="#ec8aa0"></path> <path d="M50 62 C66 52 78 36 80 16 C64 21 53 38 50 62Z" fill="#ec8aa0"></path> <path d="M50 4 C61 19 61 45 50 62 C39 45 39 19 50 4Z" fill="#f8c3cd"></path> <path d="M50 14 V56" stroke="#d8607c" stroke-width="1" fill="none" opacity="0.6"></path> </symbol> </defs> </svg> <header class="hero"> <div class="band" aria-hidden="true"></div> <div class="hero-inner gutter"> <div class="invocation"> <svg class="ganesh" viewbox="4 0 112 134" role="img" aria-label="Shri Ganesh" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"> <path d="M43 46 C42 34 48 25 54 19 C57 16 59 12 60 7 C61 12 63 16 66 19 C72 25 78 34 77 46"></path> <path d="M40 46 H80" stroke-width="3.2"></path> <path d="M44 39 H76"></path> <g fill="currentColor" stroke="none"><circle cx="60" cy="4.5" r="2.3"></circle><circle cx="60" cy="27" r="2.6"></circle><circle cx="51" cy="33" r="1.6"></circle><circle cx="69" cy="33" r="1.6"></circle></g> <path d="M43 50 C30 42 11 46 9 64 C7 81 22 93 38 89 C42 88 44 85 45 81"></path> <path d="M77 50 C90 42 109 46 111 64 C113 81 98 93 82 89 C78 88 76 85 75 81"></path> <path d="M41 55 C30 49 16 54 15 66 C14 77 24 84 35 82" stroke-width="1.6"></path> <path d="M79 55 C90 49 104 54 105 66 C106 77 96 84 85 82" stroke-width="1.6"></path> <path d="M43 50 C43 54 43 56 44 60"></path><path d="M77 50 C77 54 77 56 76 60"></path> <path d="M56 49 C56 55 64 55 64 49"></path><path d="M60 50 V57" stroke-width="2.8"></path> <path d="M46 62 Q51 66.5 56 62" stroke-width="2.6"></path><path d="M47 59.5 Q51 58 55 59.5" stroke-width="1.4"></path> <path d="M64 62 Q69 66.5 74 62" stroke-width="2.6"></path><path d="M65 59.5 Q69 58 73 59.5" stroke-width="1.4"></path> <path d="M44 60 C44 70 46 78 52 82"></path><path d="M76 60 C76 70 74 78 68 82"></path> <path d="M53 70 C53 86 53 100 57 112 C61 124 71 131 80 127 C88 123 87 112 80 111 C75 111 74 117 78 119"></path> <path d="M67 70 C67 86 66 99 68 107 C70 114 75 116 79 114"></path> <g stroke-width="1.6"><path d="M54 82 Q60 84.5 66 82"></path><path d="M54 90 Q60 92.5 66 90"></path><path d="M54.5 98 Q60.5 100.5 66.5 98"></path></g> <path d="M70 80 C75 83 78 89 76 95" stroke-width="2.8"></path> </svg> <p class="shloka" lang="sa">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p> </div> <p class="blessing" lang="hi">शुभ विवाह</p> <p class="invite">Together with their families, we joyfully invite you to celebrate our wedding.</p> <div class="cartouche"> <h1 class="names">Himanshu <span class="amp">&amp;</span> Megha</h1> <p class="families">[Son of Mr. &amp; Mrs. ___] · [Daughter of Mr. &amp; Mrs. ___]</p> </div> <p class="date">Friday, 12 February 2027</p> <p class="city">New Delhi</p> <p class="message">[A line or two in your own words: how you met, or what having everyone there means to you.]</p> <a class="btn" href="#contacts">RSVP</a> </div> <svg class="pond" viewbox="0 0 800 120" preserveaspectratio="xMidYMax slice" aria-hidden="true"> <rect x="0" y="70" width="800" height="50" fill="#0a2928"></rect> <path d="M0 74 Q 100 64 200 74 T 400 74 T 600 74 T 800 74 V120 H0Z" fill="#0b2d2c"></path> <g fill="#4c9a5f"> <ellipse cx="70" cy="96" rx="44" ry="11"></ellipse> <ellipse cx="250" cy="104" rx="52" ry="12"></ellipse> <ellipse cx="455" cy="98" rx="40" ry="10"></ellipse> <ellipse cx="640" cy="106" rx="56" ry="12"></ellipse> <ellipse cx="770" cy="94" rx="36" ry="9"></ellipse> </g> <g stroke="#0b2d2c" stroke-width="2"> <path d="M70 96 L 110 92"></path><path d="M250 104 L 300 100"></path><path d="M455 98 L 492 95"></path><path d="M640 106 L 694 102"></path> </g> <use href="#lotus" x="120" y="34" width="96" height="68"></use> <use href="#lotus" x="330" y="50" width="68" height="48"></use> <use href="#lotus" x="530" y="28" width="110" height="77"></use> <use href="#lotus" x="20" y="54" width="56" height="40"></use> <use href="#lotus" x="700" y="52" width="62" height="44"></use> </svg> <div class="band" aria-hidden="true"></div> </header> <main class="gutter"> <section aria-labelledby="h-events"> <h2 id="h-events"> <svg aria-hidden="true"><use href="#lotus"></use></svg>The celebrations</h2> <div class="panels"> <article class="panel"> <h3>Haldi</h3> <p class="when">Thursday, 11 Feb · Morning, from [10:00 AM]</p> <p class="venue">[Venue name]</p> <p class="addr">[Street, area, city]</p> <p class="dress"><b>Dress</b> [Yellow, and clothes you don't mind getting stained]</p> <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%5BVenue+name%5D%2C+%5BStreet%2C+area%2C+city%5D" target="_blank" rel="noopener">Directions</a> </article> <article class="panel"> <h3>Mehendi</h3> <p class="when">Thursday, 11 Feb · Evening, from [6:00 PM]</p> <p class="venue">[Venue name]</p> <p class="addr">[Street, area, city]</p> <p class="dress"><b>Dress</b> [Greens and pastels]</p> <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%5BVenue+name%5D%2C+%5BStreet%2C+area%2C+city%5D" target="_blank" rel="noopener">Directions</a> </article> <article class="panel"> <h3>Wedding</h3> <p class="when">Friday, 12 Feb · Evening, from [7:00 PM]</p> <p class="venue">Shiven Farms</p> <p class="addr">Najafgarh–Kapashera Road, Najafgarh, New Delhi 110043</p> <p class="dress"><b>Dress</b> [Traditional]</p> <a class="map" href="https://maps.app.goo.gl/fERWkt4SJfRVc9k1A" target="_blank" rel="noopener">Directions</a> </article> </div> </section> <div class="info"> <section aria-labelledby="h-travel"> <h2 id="h-travel"> <svg aria-hidden="true"><use href="#lotus"></use></svg>Getting there</h2> <dl class="travel"> <div> <dt>Nearest airport</dt> <dd>Indira Gandhi International Airport (DEL), [about __ km / __ min from Shiven Farms]</dd> </div> <div> <dt>Nearest railway station</dt> <dd>[Station name, about __ km]</dd> </div> <div> <dt>Stay</dt> <dd>[Rooms are blocked at Hotel ___ for out-of-town guests. Mention our names when booking.]</dd> </div> <div> <dt>Getting around</dt> <dd>[Shuttles will run between the hotel and the venues.]</dd> </div> </dl> </section> <section aria-labelledby="h-rsvp" id="rsvp"> <h2 id="h-rsvp"> <svg aria-hidden="true"><use href="#lotus"></use></svg>RSVP</h2> <p class="deadline">[RSVP by 15 January 2027]</p> <p class="note">[Please let us know how many of you are coming, and which functions you'll attend.]</p> <div class="contacts" id="contacts"> <div class="contact"> <span>[Name]</span> <span class="rel">[Brother of the groom]</span> <span class="tel">[+91 98xxx xxxxx]</span> </div> <div class="contact"> <span>[Name]</span> <span class="rel">[Sister of the bride]</span> <span class="tel">[+91 98xxx xxxxx]</span> </div> </div> </section> </div> </main> <footer> <div class="band" aria-hidden="true"></div> <p class="hashtag gutter">#[YourHashtag]</p> </footer> </body> </html>
