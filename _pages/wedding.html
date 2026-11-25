@@ -1,0 +1,370 @@
+---
+layout: null
+permalink: /wedding/
+title: Wedding
+sitemap: false
+---
+
+{%- comment -%}
+  Wedding invitation, design A: "Shaadi card" (maroon card, gold foil).
+  All wording and details come from _data/wedding.yml. Standalone page with
+  its own <html>: it does not use the site layout, nav or theme toggle.
+{%- endcomment -%}
+{%- assign w = site.data.wedding -%}
+{%- assign c = w.couple -%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#3a0a12">
+    <title>{{ c.name_1 }} &amp; {{ c.name_2 }} · Wedding</title>
+    <meta name="description" content="{{ w.invite_line | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ c.name_1 | escape }} &amp; {{ c.name_2 | escape }} · {{ w.date_display | escape }}">
+    <meta property="og:description" content="{{ w.invite_line | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Rozha+One&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+    <style>
+      /* Layout: one tall printed card on a darker table; double gold frame; a centered stationery column. */
+      :root {
+        --table: #2e0810;
+        --card: #681022;
+        --card-hi: #7d1a2c;
+        --gold: #d8b36a;
+        --gold-hi: #f6e3ae;
+        --gold-lo: #a27634;
+        --ink: #f6e9d0;
+        --ink-soft: #dcc6a3;
+        --display: "Rozha One", "Bodoni 72", "Didot", "Times New Roman", serif;
+        --body: "EB Garamond", Garamond, "Iowan Old Style", Georgia, serif;
+        color-scheme: dark;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--table) radial-gradient(ellipse at 50% 0%, #4a0d18 0%, var(--table) 70%) fixed;
+        color: var(--ink);
+        font-family: var(--body);
+        font-size: 1.15rem;
+        line-height: 1.55;
+      }
+      .table {
+        padding-block: max(20px, env(safe-area-inset-top)) 48px;
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+      }
+      .card {
+        position: relative;
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 10px;
+        background:
+          radial-gradient(circle at 50% 18%, var(--card-hi) 0%, transparent 55%),
+          radial-gradient(circle, rgb(255 255 255 / 0.035) 1px, transparent 1.5px) 0 0 / 14px 14px,
+          var(--card);
+        border: 1px solid var(--gold-lo);
+        box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.6);
+      }
+      .frame {
+        position: relative;
+        border: 1.5px solid var(--gold);
+        padding: 56px 28px 40px;
+        display: grid;
+        gap: 44px;
+        text-align: center;
+      }
+      .frame::before {
+        content: "";
+        position: absolute;
+        inset: 6px;
+        border: 0.5px solid var(--gold-lo);
+        pointer-events: none;
+      }
+      .corner { position: absolute; width: 46px; height: 46px; color: var(--gold); }
+      .corner.tl { top: -2px; left: -2px; }
+      .corner.tr { top: -2px; right: -2px; transform: scaleX(-1); }
+      .corner.bl { bottom: -2px; left: -2px; transform: scaleY(-1); }
+      .corner.br { bottom: -2px; right: -2px; transform: scale(-1, -1); }
+
+      .foil {
+        color: var(--gold);
+      }
+      @supports (background-clip: text) or (-webkit-background-clip: text) {
+        .foil {
+          background: linear-gradient(100deg, var(--gold-lo) 0%, var(--gold-hi) 30%, var(--gold) 50%, var(--gold-hi) 70%, var(--gold-lo) 100%) 0 0 / 200% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shimmer 2.4s ease-out 0.3s both;
+        }
+      }
+      @keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+      .label {
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .hero { display: grid; gap: 18px; justify-items: center; }
+      .mandala { width: 92px; height: 92px; color: var(--gold); }
+      .blessing { margin: 0; font-family: var(--display); font-size: 1.5rem; line-height: 1.2; }
+      .invite { margin: 0; max-width: 30ch; font-style: italic; color: var(--ink-soft); }
+      .names {
+        margin: 6px 0 0;
+        font-family: var(--display);
+        font-weight: 400;
+        font-size: clamp(2.5rem, 10vw, 4.1rem);
+        line-height: 1.02;
+        text-wrap: balance;
+        display: grid;
+        gap: 4px;
+      }
+      .names .amp { font-family: var(--body); font-style: italic; font-size: 0.55em; line-height: 1.2; }
+      .families { margin: 0; font-size: 0.95rem; color: var(--ink-soft); max-width: 36ch; }
+      .rule { display: flex; align-items: center; gap: 12px; width: min(260px, 80%); color: var(--gold); }
+      .rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.7; }
+      .rule svg { width: 14px; height: 14px; flex: none; }
+      .date { margin: 0; font-family: var(--display); font-size: clamp(1.35rem, 5vw, 1.75rem); line-height: 1.2; }
+      .city { margin: -10px 0 0; }
+      .message { margin: 0; max-width: 34ch; color: var(--ink-soft); }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 34px;
+        background: linear-gradient(180deg, var(--gold-hi), var(--gold) 60%, var(--gold-lo));
+        color: #4a0b17;
+        font-family: var(--body);
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 2px;
+      }
+      .btn:hover { filter: brightness(1.08); }
+      a:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+
+      section { display: grid; gap: 26px; justify-items: center; }
+      h2 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      h2::before, h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lo)); }
+      h2::after { transform: scaleX(-1); }
+
+      .events { display: grid; gap: 30px; width: 100%; }
+      .event { display: grid; gap: 4px; justify-items: center; }
+      .event + .event { padding-top: 30px; border-top: 1px dashed rgb(216 179 106 / 0.35); }
+      .event h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; }
+      .event .when { margin: 0; font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+      .event .venue { margin: 6px 0 0; font-style: italic; }
+      .event .addr { margin: 0; color: var(--ink-soft); font-size: 1rem; }
+      .event .dress { margin: 6px 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+      .event .dress span { color: var(--gold); }
+      .text-link {
+        margin-top: 8px;
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 1px solid var(--gold-lo);
+        padding-bottom: 1px;
+      }
+      .text-link:hover { color: var(--gold-hi); }
+
+      dl.travel { margin: 0; display: grid; gap: 18px; max-width: 40ch; }
+      dl.travel dt { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+      dl.travel dd { margin: 2px 0 0; }
+
+      .rsvp-deadline { margin: 0; font-family: var(--display); font-size: 1.45rem; line-height: 1.2; }
+      .rsvp-note { margin: 0; max-width: 34ch; color: var(--ink-soft); }
+
+      .contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 40px; }
+      .contact { display: grid; gap: 0; }
+      .contact .who { font-size: 1.1rem; }
+      .contact .rel { font-size: 0.9rem; color: var(--ink-soft); font-style: italic; }
+      .contact .tel { color: var(--gold); text-decoration: none; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+
+      footer { display: grid; gap: 12px; justify-items: center; }
+      .hashtag { margin: 0; font-family: var(--display); font-size: 1.3rem; }
+
+      /* Ganesh ji and the shloka at the top (from _data/wedding.yml) */
+      .invocation { display: grid; justify-items: center; gap: 10px; text-align: center; }
+      .ganesh { display: block; width: 76px; height: 91px; color: var(--gold); }
+      .shloka { margin: 0; font-family: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif; font-size: 1.05rem; line-height: 1.75; color: var(--ink-soft); text-wrap: balance; }
+      .ganesh { width: 88px; height: 105px; }
+      @media (max-width: 420px) {
+        .frame { padding: 48px 18px 32px; gap: 38px; }
+        body { font-size: 1.08rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .foil { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="corner" viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M2 44 V2 H44" stroke-width="2" />
+          <path d="M9 38 V9 H38" />
+          <path d="M9 22 C 16 22, 22 16, 22 9" />
+          <circle cx="9" cy="9" r="3" fill="currentColor" stroke="none" />
+          <path d="M15 15 l 4 -4 l 4 4 l -4 4 z" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="lozenge" viewBox="0 0 14 14"><path d="M7 0 L14 7 L7 14 L0 7 Z" fill="currentColor" /></symbol>
+      </defs>
+    </svg>
+
+    <div class="table">
+      <main class="card">
+        <div class="frame">
+          <svg class="corner tl" aria-hidden="true"><use href="#corner" /></svg>
+          <svg class="corner tr" aria-hidden="true"><use href="#corner" /></svg>
+          <svg class="corner bl" aria-hidden="true"><use href="#corner" /></svg>
+          <svg class="corner br" aria-hidden="true"><use href="#corner" /></svg>
+
+          <header class="hero">
+            {%- if w.ganesh or w.shloka %}
+            <div class="invocation">
+              {%- if w.ganesh %}
+            <svg class="ganesh" viewBox="4 0 112 134" role="img" aria-label="Shri Ganesh" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M43 46 C42 34 48 25 54 19 C57 16 59 12 60 7 C61 12 63 16 66 19 C72 25 78 34 77 46" />
+              <path d="M40 46 H80" stroke-width="3.2" />
+              <path d="M44 39 H76" />
+              <g fill="currentColor" stroke="none"><circle cx="60" cy="4.5" r="2.3" /><circle cx="60" cy="27" r="2.6" /><circle cx="51" cy="33" r="1.6" /><circle cx="69" cy="33" r="1.6" /></g>
+              <path d="M43 50 C30 42 11 46 9 64 C7 81 22 93 38 89 C42 88 44 85 45 81" />
+              <path d="M77 50 C90 42 109 46 111 64 C113 81 98 93 82 89 C78 88 76 85 75 81" />
+              <path d="M41 55 C30 49 16 54 15 66 C14 77 24 84 35 82" stroke-width="1.6" />
+              <path d="M79 55 C90 49 104 54 105 66 C106 77 96 84 85 82" stroke-width="1.6" />
+              <path d="M43 50 C43 54 43 56 44 60" /><path d="M77 50 C77 54 77 56 76 60" />
+              <path d="M56 49 C56 55 64 55 64 49" /><path d="M60 50 V57" stroke-width="2.8" />
+              <path d="M46 62 Q51 66.5 56 62" stroke-width="2.6" /><path d="M47 59.5 Q51 58 55 59.5" stroke-width="1.4" />
+              <path d="M64 62 Q69 66.5 74 62" stroke-width="2.6" /><path d="M65 59.5 Q69 58 73 59.5" stroke-width="1.4" />
+              <path d="M44 60 C44 70 46 78 52 82" /><path d="M76 60 C76 70 74 78 68 82" />
+              <path d="M53 70 C53 86 53 100 57 112 C61 124 71 131 80 127 C88 123 87 112 80 111 C75 111 74 117 78 119" />
+              <path d="M67 70 C67 86 66 99 68 107 C70 114 75 116 79 114" />
+              <g stroke-width="1.6"><path d="M54 82 Q60 84.5 66 82" /><path d="M54 90 Q60 92.5 66 90" /><path d="M54.5 98 Q60.5 100.5 66.5 98" /></g>
+              <path d="M70 80 C75 83 78 89 76 95" stroke-width="2.8" />
+            </svg>
+              {%- endif %}
+              {%- if w.shloka and w.shloka.size > 0 %}
+                <p class="shloka" lang="sa">{{ w.shloka | join: "<br>" }}</p>
+              {%- endif %}
+            </div>
+          {%- endif %}
+            {%- if w.blessing and w.blessing != "" %}
+              <p class="blessing foil" lang="hi">{{ w.blessing }}</p>
+            {%- endif %}
+            <p class="invite">{{ w.invite_line }}</p>
+            <h1 class="names foil">
+              <span>{{ c.name_1 }}</span>
+              <span class="amp">&amp;</span>
+              <span>{{ c.name_2 }}</span>
+            </h1>
+            {%- if c.families and c.families != "" %}
+              <p class="families">{{ c.families }}</p>
+            {%- endif %}
+            <div class="rule" aria-hidden="true"><svg><use href="#lozenge" /></svg></div>
+            <p class="date foil">{{ w.date_display }}</p>
+            <p class="city label">{{ w.city }}</p>
+            {%- if w.message and w.message != "" %}
+              <p class="message">{{ w.message }}</p>
+            {%- endif %}
+            <a class="btn" href="{% if w.rsvp.url and w.rsvp.url != '' %}{{ w.rsvp.url }}{% else %}#contacts{% endif %}">RSVP</a>
+          </header>
+
+          <section aria-labelledby="h-events">
+            <h2 id="h-events">The celebrations</h2>
+            <div class="events">
+              {%- for e in w.events %}
+                <article class="event">
+                  <h3 class="foil">{{ e.name }}</h3>
+                  <p class="when">{{ e.date }} · {{ e.time }}</p>
+                  <p class="venue">{{ e.venue }}</p>
+                  <p class="addr">{{ e.address }}</p>
+                  {%- if e.dress_code and e.dress_code != "" %}
+                    <p class="dress"><span>Dress:</span> {{ e.dress_code }}</p>
+                  {%- endif %}
+                  {%- capture q %}{{ e.venue }}, {{ e.address }}{% endcapture %}
+                  <a
+                    class="text-link"
+                    href="{% if e.map_url and e.map_url != '' %}{{ e.map_url }}{% else %}https://www.google.com/maps/search/?api=1&amp;query={{ q | url_encode }}{% endif %}"
+                    target="_blank"
+                    rel="noopener"
+                    >Map</a
+                  >
+                </article>
+              {%- endfor %}
+            </div>
+          </section>
+
+          {%- if w.travel and w.travel.size > 0 %}
+            <section aria-labelledby="h-travel">
+              <h2 id="h-travel">Getting there</h2>
+              <dl class="travel">
+                {%- for t in w.travel %}
+                  <div>
+                    <dt>{{ t.label }}</dt>
+                    <dd>{{ t.value }}</dd>
+                  </div>
+                {%- endfor %}
+              </dl>
+            </section>
+          {%- endif %}
+
+          <section aria-labelledby="h-rsvp" id="rsvp">
+            <h2 id="h-rsvp">Kindly reply</h2>
+            <p class="rsvp-deadline foil">{{ w.rsvp.deadline }}</p>
+            <p class="rsvp-note">{{ w.rsvp.note }}</p>
+            {%- if w.rsvp.url and w.rsvp.url != "" %}
+              <a class="btn" href="{{ w.rsvp.url }}" target="_blank" rel="noopener">RSVP online</a>
+            {%- endif %}
+          </section>
+
+          {%- if w.contacts and w.contacts.size > 0 %}
+            <section aria-labelledby="h-contacts" id="contacts">
+              <h2 id="h-contacts">Questions? Call us</h2>
+              <div class="contacts">
+                {%- for p in w.contacts %}
+                  <div class="contact">
+                    <span class="who">{{ p.name }}</span>
+                    <span class="rel">{{ p.relation }}</span>
+                    {%- if p.phone contains "[" %}
+                      <span class="tel">{{ p.phone }}</span>
+                    {%- else %}
+                      <a class="tel" href="tel:{{ p.phone | remove: ' ' | remove: '-' }}">{{ p.phone }}</a>
+                    {%- endif %}
+                  </div>
+                {%- endfor %}
+              </div>
+            </section>
+          {%- endif %}
+
+          <footer>
+            <div class="rule" aria-hidden="true"><svg><use href="#lozenge" /></svg></div>
+            {%- if w.hashtag and w.hashtag != "" %}
+              <p class="hashtag foil">{{ w.hashtag }}</p>
+            {%- endif %}
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

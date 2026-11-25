@@ -1,0 +1,85 @@
+# Details for the /wedding/ invitation page (_pages/wedding.html).
+#
+# Everything in [square brackets] is a placeholder. Replace it, or delete the
+# line: optional fields (marked "optional") are hidden on the page when empty.
+# The page design lives in _pages/wedding.html; this file is only content, so
+# you can swap the design without touching the details.
+
+couple:
+  name_1: "Himanshu"
+  name_2: "Megha"
+  # optional: shown under the names, e.g. "son of ... · daughter of ..."
+  families: "[Son of Mr. & Mrs. ___] · [Daughter of Mr. & Mrs. ___]"
+
+# Shown in large type at the top. Keep it short.
+date_display: "Friday, 12 February 2027"
+# Wedding start, used for the countdown and design C's big date.
+# Format: YYYY-MM-DDTHH:MM:SS+05:30. The 7:00 PM start is still a placeholder.
+date_iso: "2027-02-12T19:00:00+05:30"
+city: "New Delhi"
+
+# optional: Ganesh ji drawing at the very top of the page. Set to false to hide.
+ganesh: true
+# optional: shown under Ganesh ji, one entry per line. Remove to hide.
+shloka:
+  - "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।"
+  - "निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"
+
+# optional: a line above the names. Remove to hide.
+blessing: "शुभ विवाह"
+
+invite_line: "Together with their families, we joyfully invite you to celebrate our wedding."
+
+# optional: a short note from the two of you
+message: "[A line or two in your own words: how you met, or what having everyone there means to you.]"
+
+# optional
+hashtag: "#[YourHashtag]"
+
+# One entry per function. Add, remove or reorder freely; the page shows them in this order.
+events:
+  - name: "Haldi"
+    date: "Thursday, 11 Feb"
+    time: "Morning, from [10:00 AM]"
+    venue: "[Venue name]"
+    address: "[Street, area, city]"
+    map_url: "" # optional: a Google Maps link. Empty = the Map button searches for venue + address
+    dress_code: "[Yellow, and clothes you don't mind getting stained]"
+  - name: "Mehendi"
+    date: "Thursday, 11 Feb"
+    time: "Evening, from [6:00 PM]"
+    venue: "[Venue name]"
+    address: "[Street, area, city]"
+    map_url: ""
+    dress_code: "[Greens and pastels]"
+  - name: "Wedding"
+    date: "Friday, 12 Feb"
+    time: "Evening, from [7:00 PM]"
+    venue: "Shiven Farms"
+    address: "Najafgarh–Kapashera Road, Najafgarh, New Delhi 110043"
+    map_url: "https://maps.app.goo.gl/fERWkt4SJfRVc9k1A"
+    dress_code: "[Traditional]"
+
+travel:
+  - label: "Nearest airport"
+    value: "Indira Gandhi International Airport (DEL), [about __ km / __ min from Shiven Farms]"
+  - label: "Nearest railway station"
+    value: "[Station name, about __ km]"
+  - label: "Stay"
+    value: "[Rooms are blocked at Hotel ___ for out-of-town guests. Mention our names when booking.]"
+  - label: "Getting around"
+    value: "[Shuttles will run between the hotel and the venues.]"
+
+rsvp:
+  url: "" # Google Form or similar. Empty = the RSVP button jumps to the contacts below
+  deadline: "[RSVP by 15 January 2027]"
+  note: "[Please let us know how many of you are coming, and which functions you'll attend.]"
+
+# People guests can call or WhatsApp. Shown as tap-to-call links.
+contacts:
+  - name: "[Name]"
+    relation: "[Brother of the groom]"
+    phone: "[+91 98xxx xxxxx]"
+  - name: "[Name]"
+    relation: "[Sister of the bride]"
+    phone: "[+91 98xxx xxxxx]"
